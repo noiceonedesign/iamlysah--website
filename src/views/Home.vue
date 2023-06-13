@@ -1,9 +1,19 @@
 <template>
+  <header>
+    <Navbar :logo="false"/>
+  </header>
+  <main>
     <div class="background-container">
       <img src="../assets/Lisa_Home_BG-small.jpg" alt="background image">
       <img src="../assets/Lysah_Logo_Lysah_Logo.svg" alt="Logo">
     </div>
+  </main>
 </template>
+
+<script setup>
+import Navbar from "../components/Navbar.vue";
+
+</script>
 
 <style scoped>
 .background-container {
@@ -48,7 +58,7 @@
   .background-container > img:nth-child(2) {
     width: 300px;
     left: 120px;
-    bottom: 10%;
+    top: 20%;
   }
 }
 
@@ -56,8 +66,9 @@
 
   .background-container > img:nth-child(1) {
     position: absolute;
-    width: 1700px;
+    width: 1920px;
     margin: 0;
+    top: -100px;
   }
   .background-container > img:nth-child(2) {
     position: absolute;

@@ -11,6 +11,9 @@
       <router-link active-class="active" to="/contact">contact</router-link>
     </div>
   </div>
+  <router-link v-if="props.logo" class="logo-desktop" to="/">
+    <img src="../assets/Lysah_Logo_dark.svg" alt="">
+  </router-link>
   <div class="navbar-container-desktop">
     <router-link active-class="active" to="/music">music</router-link>
     <router-link active-class="active" to="/about">about</router-link>
@@ -22,6 +25,13 @@
 
 <script setup>
 import { ref } from 'vue'
+
+const props = defineProps({
+  logo: {
+    type: Boolean,
+    default: true
+  }
+})
 
 const clicked = ref(false)
 
@@ -39,11 +49,20 @@ function clickedBurgerMenuIcon() {
 .navbar-container-desktop {
   display: none;
 }
+.logo-desktop {
+  position: fixed;
+  top: 24px;
+  left: 32px;
+  z-index: 11;
+}
+.logo-desktop > img {
+  width: 80px;
+}
 .navbar-container-mobile{
   background: var(--background-color-light);
   position: absolute;
   height: 100%;
-  width: 40vw;
+  width: 100vw;
   top: 0;
   right: 0;
   backdrop-filter: blur(4px);
@@ -91,6 +110,14 @@ function clickedBurgerMenuIcon() {
   .burger-menu {
     display: none;
   }
+  .logo-desktop {
+    top: 32px;
+    left: 128px;
+    z-index: 10;
+  }
+  .logo-desktop > img {
+    width: 120px;
+  }
   .navbar-container-mobile {
     display: none;
   }
@@ -109,7 +136,13 @@ function clickedBurgerMenuIcon() {
   }
   .navbar-container-desktop > a:hover {
     cursor: pointer;
-    text-decoration: underline;
+    box-shadow: 0 1px 0 0 var(--main-font-color-light);
+    padding-bottom: .5px;
+  }
+  .navbar-container-desktop > .active {
+    box-shadow: 0 1px 0 0 var(--main-font-color-light);
+    font-weight: bold;
+    padding-bottom: .5px;
   }
 }
 

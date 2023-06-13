@@ -1,16 +1,17 @@
 <template>
-  <div class="body-font">
-    hallo this is Montserrat
-  </div>
-  <div class="header-font">
-    hallo this is Quattrocento
-  </div>
+  <header>
+    <Navbar/>
+  </header>
+  <main>
+
+  </main>
 </template>
 
 
 <script setup>
 
 
+import Navbar from "../components/Navbar.vue";
 </script>
 
 
