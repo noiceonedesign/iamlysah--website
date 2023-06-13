@@ -1,15 +1,20 @@
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   --main-font-color-light: #F3F0EB;
   --main-font-color-dark: #2A2828;
 
-  --background-color-light: #FFFFFF50;
+  --background-color-light: #FFFFFF60;
 
   --cta-color: #637AA7;
   --dark-brown: #59433E;
+
+  --body-font: 'Montserrat', sans-serif;
+  --header-font: 'Quattrocento', serif;
 }
 body {
   margin: 0;

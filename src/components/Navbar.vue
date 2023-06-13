@@ -1,8 +1,17 @@
 <template>
-  <div class="burger-menu">
-    <img src="../assets/Burger_Menu-closed.svg" alt="">
+  <div @click="clickedBurgerMenuIcon" class="burger-menu">
+    <img v-if="!clicked" class="burger-menu-icon" src="../assets/ic_BM-closed-light.svg" alt="">
+    <img v-else class="burger-menu-icon" src="../assets/ic_BM-open-light.svg" alt="">
   </div>
-  <div class="navbar-container">
+  <div v-if="clicked" class="navbar-container-mobile">
+    <div class="links">
+      <router-link active-class="active" to="/music">music</router-link>
+      <router-link active-class="active" to="/about">about</router-link>
+      <router-link active-class="active" to="/video">video</router-link>
+      <router-link active-class="active" to="/contact">contact</router-link>
+    </div>
+  </div>
+  <div class="navbar-container-desktop">
     <router-link active-class="active" to="/music">music</router-link>
     <router-link active-class="active" to="/about">about</router-link>
     <router-link active-class="active" to="/video">video</router-link>
@@ -10,36 +19,83 @@
   </div>
 </template>
 
+
+<script setup>
+import { ref } from 'vue'
+
+const clicked = ref(false)
+
+function clickedBurgerMenuIcon() {
+  clicked.value = !clicked.value
+}
+
+</script>
+
+
 <style scoped>
 .active {
   text-decoration: underline;
 }
-.navbar-container {
-  display: flex;
-  flex-direction: column;
+.navbar-container-desktop {
+  display: none;
+}
+.navbar-container-mobile{
   background: var(--background-color-light);
   position: absolute;
-  z-index: 10;
-  left: -150px;
+  height: 100%;
+  width: 40vw;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(4px);
+  z-index: 9;
+  border-radius: 7px 0 0 7px;
+  overflow: hidden;
+}
+
+.navbar-container-mobile > .links {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  padding: 128px 0;
+}
+.navbar-container-mobile > .links > a:last-child {
+  border: none;
 }
 .burger-menu {
   position: absolute;
   display: flex;
   z-index: 10;
+  right: 24px;
+  cursor: pointer;
 }
+.burger-menu > .burger-menu-icon {
+  width: 80px;
+}
+.navbar-container-mobile > .links > a {
+  text-decoration: none;
+  color: var(--main-font-color-light);
+  border-bottom: 1px solid white;
+  padding:32px 0;
+  min-width: 128px;
+  text-align: center;
+}
+.navbar-container-mobile > .links > a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
 @media(min-width: 1200px){
   .burger-menu {
     display: none;
   }
-  a {
-    text-decoration: none;
-    color: #F3F0EB;
+  .navbar-container-mobile {
+    display: none;
   }
-  a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  .navbar-container {
+  .navbar-container-desktop {
+    display: flex;
     flex-direction: row;
     gap: 64px;
     position: fixed;
@@ -47,8 +103,14 @@
     top: 64px;
     z-index: 10;
   }
+  .navbar-container-desktop > a {
+    text-decoration: none;
+    color: var(--main-font-color-light);
+  }
+  .navbar-container-desktop > a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 </style>
-<script setup>
-</script>
