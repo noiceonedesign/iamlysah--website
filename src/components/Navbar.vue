@@ -12,7 +12,7 @@
     </div>
   </div>
   <router-link v-if="props.logo" class="logo-desktop" to="/">
-    <img src="../assets/Lysah_Logo_dark.svg" alt="">
+    <img src="../assets/lysah-logo-light.svg" alt="">
   </router-link>
   <div class="navbar-container-desktop">
     <router-link active-class="active" to="/music">music</router-link>

@@ -11,7 +11,11 @@
   --background-color-light: #FFFFFF60;
 
   --cta-color: #637AA7;
+  --cta-color-hover: #3A4966;
   --dark-brown: #59433E;
+  --card-background-color: #FFFFFF30;
+
+  --box-shadow: 2px 3px 20px 6px #59433E20;
 
   --body-font: 'Montserrat', sans-serif;
   --header-font: 'Quattrocento', serif;
@@ -22,10 +26,16 @@ body {
 #app {
 
 }
+p {
+  margin: 0;
+}
 
 main {
   height: 100vh;
   width: 100%;
   background: rgb(174,166,155);
-  background: linear-gradient(0deg, rgba(174,166,155,1) 35%, rgba(174,166,155,1) 66%, rgba(216,206,193,1) 100%);
+  background: linear-gradient(180deg, rgba(174,166,155,1) 35%, rgba(174,166,155,1) 66%, rgba(216,206,193,1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
