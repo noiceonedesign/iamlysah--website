@@ -83,7 +83,7 @@ function clickedBurgerMenuIcon() {
   border: none;
 }
 .burger-menu {
-  position: absolute;
+  position: fixed;
   display: flex;
   z-index: 10;
   right: 24px;
