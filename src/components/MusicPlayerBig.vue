@@ -40,7 +40,7 @@
   </div>
   <MusicPlayerPopUp
       v-if="settingsActive"
-      img-path="src/assets/MusicPlayerPics/Sail-2048x2048.jpg"
+      img-path="../assets/MusicPlayerPics/Sail-2048x2048.jpg"
       :artist="artist"
       :song-name="songName"
       :i-tunes-u-r-l="iTunesURL"
