@@ -4,7 +4,7 @@
        :class="[playing ? 'showing-details' : '']"
   >
     <div class="img-container" @click="pressPlay">
-      <img :src="imgPath" alt="">
+      <img :src="getImageURL" alt="">
       <div :class="[!playing ? 'play-button-wrapper' : 'pause-button-wrapper']">
         <div :class="[!playing ? 'play-button' : 'pause-button']">
           <img v-if="playing" src="../assets/ic_pause-button.svg" alt="">
@@ -142,7 +142,11 @@ export default defineComponent({
       settingsActive.value = !settingsActive.value
     }
 
-    return { audio, pressPlay, playing, songEnd, mouseOver, settingsActive, handleSettings };
+    function getImageURL() {
+      return new URL(`../assets/MusicPlayerPics/${props.imgPath}`)
+    }
+
+    return { audio, pressPlay, playing, songEnd, mouseOver, settingsActive, handleSettings, getImageURL };
   }
 })
 </script>
