@@ -16,7 +16,7 @@ MusicCardsSmall = [
     {
         songName: "I DON'T MISS YOU",
         artist: "Lysah",
-        imgPath:"./src/assets/MusicPlayerPics/IDMY-2048x2048.jpg",
+        imgPath:"@/src/assets/MusicPlayerPics/IDMY-2048x2048.jpg",
         songPath:"./src/assets/Snippets/Idontmissyou.mp3",
         spotifyURL: "https://open.spotify.com/intl-de/track/3VnGitPggHoaRaafKaVWO5?si=1edde692d0634abc",
         iTunesURL: "https://music.apple.com/at/album/i-dont-miss-you/1538952510?i=1538952511",
@@ -27,7 +27,7 @@ MusicCardsSmall = [
     {
         songName: "WILL IT BE YOU",
         artist: "Lysah",
-        imgPath:"src/assets/MusicPlayerPics/WIBY-2048x2048.jpg",
+        imgPath:"@/assets/MusicPlayerPics/WIBY-2048x2048.jpg",
         songPath:"src/assets/Snippets/WIBY.mp3",
         spotifyURL: "https://open.spotify.com/intl-de/track/08kSH9dbAKSmPq9eAUZSlq?si=a15e575cd16d4fe9",
         iTunesURL: "https://music.apple.com/at/album/will-it-be-you/1532243983?i=1532243984",
