@@ -74,7 +74,6 @@ export default defineComponent({
   align-items: center;
   width: 100%;
   gap: 32px;
-  outline: 1px solid green;
 }
 .flex-box-wrapper {
   width: 100%;
@@ -88,5 +87,19 @@ export default defineComponent({
   border-radius: 14px;
   box-sizing: border-box;
   padding: 8px;
+}
+@media (min-width: 1200px) {
+  .flex-box-big {
+    flex-direction: row;
+    align-items: flex-end;
+    max-width: 1100px;
+  }
+
+  .flex-box-grid {
+    height: 479px;
+  }
+  .flex-box-wrapper:nth-child(1) {
+    width: fit-content;
+  }
 }
 </style>

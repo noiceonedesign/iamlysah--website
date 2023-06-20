@@ -1,27 +1,7 @@
 <template>
   <div class="component-wrapper">
-    <div class="mobile-button-container">
-      <img src="../assets/ic_settings.svg" alt="" @click="handleSettings">
-      <div class="backdrop-button-container"
-           :class="[ mobileButtonActive ? 'open-settings' : '']">
-        <DropDownButton
-            button-text="buy"
-            :i-tunes-u-r-l="iTunesURL"
-            :amazon-music-u-r-l="amazonMusicURL"
-        />
-        <DropDownButton
-            button-text="stream"
-            :is-secondary="true"
-            :is-stream-button="true"
-            :is-buy-button="false"
-            :youtube-u-r-l="youtubeURL"
-            :apple-music-u-r-l="appleMusicURL"
-            :spotify-u-r-l="spotifyURL"
-        />
-      </div>
-    </div>
-    <div class="img-container">
-      <img src="../assets/MusicPlayerPics/Sail-2048x2048.jpg" alt="">
+    <div class="img-container" @click="pressPlay">
+      <img src="../assets/MusicPlayerPics/Sail-2048x2048.jpg" alt="album cover">
       <div :class="[!playing ? 'play-button-wrapper' : 'pause-button-wrapper']">
         <div :class="[!playing ? 'play-button' : 'pause-button']">
           <img v-if="!playing" src="../assets/ic_play-button.svg" alt="">
@@ -32,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="content-container">
+    <div class="content-container" @click="pressPlay">
       <div class="description">
         <p class="song-name">SAIL</p>
         <p class="artist">Lysah</p>
@@ -54,15 +34,31 @@
         />
       </div>
     </div>
+    <div class="mobile-setting-container">
+      <img src="../assets/ic_settings.svg" alt="" @click="handleSettings">
+    </div>
   </div>
+  <MusicPlayerPopUp
+      v-if="settingsActive"
+      img-path="src/assets/MusicPlayerPics/Sail-2048x2048.jpg"
+      :artist="artist"
+      :song-name="songName"
+      :i-tunes-u-r-l="iTunesURL"
+      :youtube-u-r-l="youtubeURL"
+      :apple-music-u-r-l="appleMusicURL"
+      :spotify-u-r-l="spotifyURL"
+      :amazon-music-u-r-l="amazonMusicURL"
+      @closePopUp="handleSettings"
+  />
 
 </template>
 
 <script lang="ts">
 import {defineComponent, ref} from "vue";
 import DropDownButton from "./DropDownButton.vue";
+import MusicPlayerPopUp from "./MusicPlayerPopUp.vue";
 export default defineComponent({
-  components: { DropDownButton},
+  components: { DropDownButton, MusicPlayerPopUp},
   name:"MusicPlayerBig",
   props: {
     id: {
@@ -94,7 +90,7 @@ export default defineComponent({
   setup() {
     const playing = ref(false);
     const audio = ref<HTMLAudioElement>();
-    const mobileButtonActive = ref(false);
+    const settingsActive = ref(false);
 
     function pressPlay() {
       playing.value = !playing.value;
@@ -110,11 +106,10 @@ export default defineComponent({
     }
 
     function handleSettings() {
-      mobileButtonActive.value = !mobileButtonActive.value
-      console.log('hallo')
+      settingsActive.value = !settingsActive.value
     }
 
-    return { audio, pressPlay, playing, songEnd, mobileButtonActive, handleSettings };
+    return { audio, pressPlay, playing, songEnd, settingsActive, handleSettings };
   }
 })
 
@@ -153,6 +148,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   z-index: 8;
+  opacity: 0;
 }
 
 .play-button {
@@ -217,49 +213,33 @@ export default defineComponent({
 }
 .description > .song-name {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
 }
 .description > .artist {
-  font-size: 14px;
+  font-size: 12px;
 }
 .button-container {
   display: none;
 }
-.mobile-button-container {
-  width: 100%;
+
+.mobile-setting-container {
+  position: relative;
+  z-index: 12;
+  width: fit-content;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  left: 0;
-  position: absolute;
-  overflow-x: hidden;
 }
-.backdrop-button-container {
-  background: var(--background-color-light);
-  backdrop-filter: blur(4px);
-  border-radius: 14px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 11;
-  transform: translateX(300px);
-  transition: all 250ms ease-in-out;
-}
-.open-settings {
-  transform: translateX(0);
-  transition: all 250ms ease-in-out;
-}
-.mobile-button-container > img {
-  width: 64px;
-  position: absolute;
-  right: 0;
+.mobile-setting-container > img {
+  width: 48px;
   z-index: 20;
   rotate: 90deg;
 }
 @media (min-width: 1200px) {
+  .mobile-setting-container {
+    display: none;
+  }
   .component-wrapper {
     height: fit-content;
     width: 350px;
@@ -376,7 +356,7 @@ export default defineComponent({
   }
   .description > .song-name {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
   }
   .description > .artist {
     font-size: 14px;
