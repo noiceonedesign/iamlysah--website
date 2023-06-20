@@ -16,8 +16,8 @@ MusicCardsSmall = [
     {
         songName: "I DON'T MISS YOU",
         artist: "Lysah",
-        imgPath:"src/assets/MusicPlayerPics/IDMY-2048x2048.jpg",
-        songPath:"src/assets/Snippets/Idontmissyou.mp3",
+        imgPath:"../assets/MusicPlayerPics/IDMY-2048x2048.jpg",
+        songPath:"../assets/Snippets/Idontmissyou.mp3",
         spotifyURL: "https://open.spotify.com/intl-de/track/3VnGitPggHoaRaafKaVWO5?si=1edde692d0634abc",
         iTunesURL: "https://music.apple.com/at/album/i-dont-miss-you/1538952510?i=1538952511",
         amazonMusicURL: "https://amazon.de/music/player/albums/B08MWXSMK8?marketplaceId=A1PA6795UKMFR9&musicTerritory=DE&ref=dm_sh_WiWRHAeOFnoIrWsv3ydOyqL9c",
