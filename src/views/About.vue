@@ -1,7 +1,12 @@
 <template>
+  <header>
+    <Navbar/>
+  </header>
   <main>
-    <div>
-      About
-    </div>
+
   </main>
 </template>
+
+<script setup>
+import Navbar from "../components/Navbar.vue";
+</script>
