@@ -66,6 +66,7 @@ function clickedBurgerMenuIcon() {
   top: 0;
   right: 0;
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   z-index: 9;
   border-radius: 7px 0 0 7px;
   overflow: hidden;
