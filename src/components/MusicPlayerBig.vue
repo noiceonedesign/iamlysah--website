@@ -7,7 +7,7 @@
           <img v-if="!playing" src="../assets/ic_play-button.svg" alt="">
           <img v-else src="../assets/ic_pause-button.svg" alt=""/>
           <audio @ended="songEnd" hidden="true" ref="audio">
-            <source src="../assets/Snippets/Lysah-Sail.mp3" type="audio/mpeg">
+            <source src="../assets/Snippets/SAIL.mp3" type="audio/mpeg">
           </audio>
         </div>
       </div>
@@ -224,7 +224,7 @@ export default defineComponent({
 
 .mobile-setting-container {
   position: relative;
-  z-index: 12;
+  z-index: 8;
   width: fit-content;
   height: 100%;
   display: flex;

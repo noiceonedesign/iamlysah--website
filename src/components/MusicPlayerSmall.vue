@@ -206,7 +206,7 @@ export default defineComponent({
 }
 .mobile-setting-container {
   position: relative;
-  z-index: 12;
+  z-index: 8;
   width: fit-content;
   height: 100%;
   display: flex;
