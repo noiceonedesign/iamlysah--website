@@ -143,7 +143,7 @@ export default defineComponent({
     }
 
     function getImageURL() {
-      return new URL(`../assets/MusicPlayerPics/${props.imgPath}`)
+      return new URL(`../assets/MusicPlayerPics/${props.imgPath}`, import.meta.url)
     }
 
     return { audio, pressPlay, playing, songEnd, mouseOver, settingsActive, handleSettings, getImageURL };
