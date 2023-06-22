@@ -80,26 +80,26 @@ export default defineComponent({
     })
     const buyOptions = [
       {
-        imgPath:"src/assets/ic_itunes.svg",
+        imgPath:"/assets/ic_itunes.svg",
         URL: props.iTunesURL
       },
       {
-        imgPath: "src/assets/ic_amazon-music.svg",
+        imgPath: "/assets/ic_amazon-music.svg",
         URL: props.amazonMusicURL
       }
     ]
 
     const streamOptions = [
       {
-        imgPath:"src/assets/ic_spotify.svg",
+        imgPath:"/assets/ic_spotify.svg",
         URL: props.spotifyURL
       },
       {
-        imgPath:"src/assets/ic_apple-music.svg",
+        imgPath:"/assets/ic_apple-music.svg",
         URL: props.appleMusicURL
       },
       {
-        imgPath:"src/assets/ic_youtube.svg",
+        imgPath:"/assets/ic_youtube.svg",
         URL: props.youtubeURL
       }
     ]

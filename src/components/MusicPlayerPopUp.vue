@@ -12,22 +12,22 @@
       <div class="option">
         <p class="option-header">buy</p>
         <a :href="iTunesURL" target="_blank">
-          <img src="../assets/ic_itunes.svg" alt="">
+          <img src="/assets/ic_itunes.svg" alt="">
         </a>
         <a :href="amazonMusicURL" target="_blank">
-          <img src="../assets/ic_amazon-music.svg" alt="">
+          <img src="/assets/ic_amazon-music.svg" alt="">
         </a>
       </div>
       <div class="option">
         <p class="option-header">stream</p>
         <a :href="youtubeURL" target="_blank">
-          <img src="../assets/ic_youtube.svg" alt="">
+          <img src="/assets/ic_youtube.svg" alt="">
         </a>
         <a :href="appleMusicURL" target="_blank">
-          <img src="../assets/ic_apple-music.svg" alt="">
+          <img src="/assets/ic_apple-music.svg" alt="">
         </a>
         <a :href="spotifyURL" target="_blank">
-          <img src="../assets/ic_spotify.svg" alt="">
+          <img src="/assets/ic_spotify.svg" alt="">
         </a>
       </div>
     </div>
