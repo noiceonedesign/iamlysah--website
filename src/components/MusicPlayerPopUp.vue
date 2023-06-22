@@ -87,6 +87,7 @@ export default defineComponent({
   top: 0;
   left: 0;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   z-index: 100;
   display: flex;
   justify-content: center;

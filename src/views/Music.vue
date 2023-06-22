@@ -96,7 +96,7 @@ export default defineComponent({
   }
 
   .flex-box-grid {
-    height: 479px;
+    height: 463px;
   }
   .flex-box-wrapper:nth-child(1) {
     width: fit-content;

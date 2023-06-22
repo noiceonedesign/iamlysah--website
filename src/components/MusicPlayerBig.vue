@@ -17,22 +17,22 @@
         <p class="song-name">SAIL</p>
         <p class="artist">Lysah</p>
       </div>
-      <div class="button-container">
-        <DropDownButton
-            button-text="buy"
-            :i-tunes-u-r-l="iTunesURL"
-            :amazon-music-u-r-l="amazonMusicURL"
-        />
-        <DropDownButton
-            button-text="stream"
-            :is-secondary="true"
-            :is-stream-button="true"
-            :is-buy-button="false"
-            :youtube-u-r-l="youtubeURL"
-            :apple-music-u-r-l="appleMusicURL"
-            :spotify-u-r-l="spotifyURL"
-        />
-      </div>
+    </div>
+    <div class="button-container">
+      <DropDownButton
+          button-text="buy"
+          :i-tunes-u-r-l="iTunesURL"
+          :amazon-music-u-r-l="amazonMusicURL"
+      />
+      <DropDownButton
+          button-text="stream"
+          :is-secondary="true"
+          :is-stream-button="true"
+          :is-buy-button="false"
+          :youtube-u-r-l="youtubeURL"
+          :apple-music-u-r-l="appleMusicURL"
+          :spotify-u-r-l="spotifyURL"
+      />
     </div>
     <div class="mobile-setting-container">
       <img src="/assets/ic_settings.svg" alt="" @click="handleSettings">
@@ -40,7 +40,7 @@
   </div>
   <MusicPlayerPopUp
       v-if="settingsActive"
-      img-path="../assets/MusicPlayerPics/Sail-2048x2048.jpg"
+      img-path="/assets/MusicPlayerPics/Sail-2048x2048.jpg"
       :artist="artist"
       :song-name="songName"
       :i-tunes-u-r-l="iTunesURL"
@@ -363,8 +363,8 @@ export default defineComponent({
   }
   .button-container {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    padding: 16px 8px;
   }
 }
 

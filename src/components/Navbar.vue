@@ -1,14 +1,16 @@
 <template>
-  <div @click="clickedBurgerMenuIcon" class="burger-menu">
-    <img v-if="!clicked" class="burger-menu-icon" src="/assets/ic_BM-closed-light.svg" alt="">
-    <img v-else class="burger-menu-icon" src="/assets/ic_BM-open-light.svg" alt="">
-  </div>
-  <div v-if="clicked" class="navbar-container-mobile">
-    <div class="links">
-      <router-link active-class="active" to="/music">music</router-link>
-      <router-link active-class="active" to="/about">about</router-link>
-      <router-link active-class="active" to="/video">video</router-link>
-      <router-link active-class="active" to="/contact">contact</router-link>
+  <div class="navbar">
+    <div @click="clickedBurgerMenuIcon" class="burger-menu">
+      <img v-if="!clicked" class="burger-menu-icon" src="/assets/ic_BM-closed-light.svg" alt="">
+      <img v-else class="burger-menu-icon" src="/assets/ic_BM-open-light.svg" alt="">
+    </div>
+    <div class="navbar-container-mobile">
+      <div class="links" :class="clicked ? 'open' : 'closed'">
+        <router-link active-class="active" to="/music">music</router-link>
+        <router-link active-class="active" to="/about">about</router-link>
+        <router-link active-class="active" to="/video">video</router-link>
+        <router-link active-class="active" to="/contact">contact</router-link>
+      </div>
     </div>
   </div>
   <router-link v-if="props.logo" class="logo-desktop" to="/">
@@ -37,6 +39,16 @@ const clicked = ref(false)
 
 function clickedBurgerMenuIcon() {
   clicked.value = !clicked.value
+  disableScroll();
+}
+
+function disableScroll() {
+  if (clicked.value) {
+    document.body.style.overflowY = 'hidden';
+  }
+  else {
+    document.body.style.overflowY = 'visible';
+  }
 }
 
 </script>
@@ -58,27 +70,37 @@ function clickedBurgerMenuIcon() {
 .logo-desktop > img {
   width: 80px;
 }
-.navbar-container-mobile{
-  background: var(--card-background-color);
+.open {
+  transition: all ease-in-out 250ms;
+  transform: translateX(0px);
+}
+.closed {
+  transition: all ease-in-out 250ms;
+  transform: translateX(740px);
+}
+
+
+.navbar-container-mobile {
   position: absolute;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   top: 0;
   right: 0;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   z-index: 9;
   border-radius: 7px 0 0 7px;
   overflow: hidden;
 }
 
 .navbar-container-mobile > .links {
+  background: var(--card-background-color);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   align-items: center;
-  padding: 128px 0;
+  justify-content: center;
 }
 .navbar-container-mobile > .links > a:last-child {
   border: none;
