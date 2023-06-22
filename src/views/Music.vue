@@ -31,10 +31,6 @@
                              :youtube-u-r-l="musicCard.youtubeURL"
           />
         </div>
-        <MuscicPlayerSmall artist="Lysah"
-                           song-path="/assets/Snippets/Idontmissyou.mp3"
-                           img-path="/vite.svg"
-                           song-name="I DON'T MISS YOU"/>
       </div>
     </div>
   </main>
