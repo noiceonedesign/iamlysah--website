@@ -1,13 +1,13 @@
 <template>
   <div class="component-wrapper">
     <div class="img-container" @click="pressPlay">
-      <img src="../assets/MusicPlayerPics/Sail-2048x2048.jpg" alt="album cover">
+      <img src="/assets/MusicPlayerPics/Sail-2048x2048.jpg" alt="album cover">
       <div :class="[!playing ? 'play-button-wrapper' : 'pause-button-wrapper']">
         <div :class="[!playing ? 'play-button' : 'pause-button']">
-          <img v-if="!playing" src="../assets/ic_play-button.svg" alt="">
-          <img v-else src="../assets/ic_pause-button.svg" alt=""/>
+          <img v-if="!playing" src="/assets/ic_play-button.svg" alt="">
+          <img v-else src="/assets/ic_pause-button.svg" alt=""/>
           <audio @ended="songEnd" hidden="true" ref="audio">
-            <source src="../assets/Snippets/SAIL.mp3" type="audio/mpeg">
+            <source src="/assets/Snippets/SAIL.mp3" type="audio/mpeg">
           </audio>
         </div>
       </div>
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="mobile-setting-container">
-      <img src="../assets/ic_settings.svg" alt="" @click="handleSettings">
+      <img src="/assets/ic_settings.svg" alt="" @click="handleSettings">
     </div>
   </div>
   <MusicPlayerPopUp

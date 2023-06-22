@@ -7,7 +7,7 @@
       <img :src="getImageURL" alt="">
       <div :class="[!playing ? 'play-button-wrapper' : 'pause-button-wrapper']">
         <div :class="[!playing ? 'play-button' : 'pause-button']">
-          <img v-if="playing" src="../assets/ic_pause-button.svg" alt="">
+          <img v-if="playing" src="/assets/ic_play-button.svg" alt="">
           <audio @ended="songEnd" hidden="true" ref="audio">
             <source :src="songPath" type="audio/mpeg">
           </audio>
@@ -19,7 +19,7 @@
       <p class="artist">{{ artist }}</p>
     </div>
     <div class="mobile-setting-container">
-      <img src="../assets/ic_settings.svg" alt="" @click="handleSettings">
+      <img src="/assets/ic_settings.svg" alt="" @click="handleSettings">
     </div>
   </div>
     <MusicPlayerPopUp
@@ -44,8 +44,8 @@
         <img :src="imgPath" alt="">
         <div :class="[!playing ? 'play-button-wrapper' : 'pause-button-wrapper']">
           <div @click="pressPlay" :class="[!playing ? 'play-button' : 'pause-button']">
-            <img v-if="!playing" src="../assets/ic_play-button.svg" alt="">
-            <img v-else src="../assets/ic_pause-button.svg" alt=""/>
+            <img v-if="!playing" src="/assets/ic_play-button.svg" alt="">
+            <img v-else src="/assets/ic_pause-button.svg" alt=""/>
             <audio @ended="songEnd" hidden="true" ref="audio">
               <source :src="songPath" type="audio/mpeg">
             </audio>
@@ -143,7 +143,7 @@ export default defineComponent({
     }
 
     function getImageURL() {
-      return new URL(`../assets/MusicPlayerPics/${props.imgPath}`, import.meta.url)
+      return new URL(`../assets/MusicPlayerPics/${props.imgPath}`, import.meta.ur)
     }
 
     return { audio, pressPlay, playing, songEnd, mouseOver, settingsActive, handleSettings, getImageURL };
