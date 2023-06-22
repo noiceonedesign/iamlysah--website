@@ -94,8 +94,8 @@ function disableScroll() {
 
 .navbar-container-mobile > .links {
   background: var(--card-background-color);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   display: flex;
   flex-direction: column;
   height: 100%;
