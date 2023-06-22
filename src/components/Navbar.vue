@@ -82,7 +82,7 @@ function disableScroll() {
 
 .navbar-container-mobile {
   position: absolute;
-  height: 100%;
+  height: 100svh;
   width: 100%;
   top: 0;
   right: 0;
