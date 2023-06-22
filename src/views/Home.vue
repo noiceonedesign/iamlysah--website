@@ -4,8 +4,8 @@
   </header>
   <main>
     <div class="background-container">
-      <img src="../assets/Lisa_Home_BG-small.jpg" alt="background image">
-      <img src="../assets/Lysah_Logo_Lysah_Logo.svg" alt="Logo">
+      <img src="/assets/Lisa_Home_BG-small.jpg" alt="background image">
+      <img src="/assets/Lysah_Logo_Lysah_Logo.svg" alt="Logo">
     </div>
   </main>
 </template>
