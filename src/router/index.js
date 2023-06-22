@@ -4,6 +4,7 @@ import About from "../views/About.vue"
 import Music from "../views/Music.vue";
 import Contact from "../views/Contact.vue";
 import Video from "../views/Video.vue";
+import Impressum from "../views/Impressum.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
             path:"/video",
             name:"video",
             component: Video
+        },
+        {
+            path:"/impressum",
+            name:"impressum",
+            component: Impressum
         }
     ]
 })

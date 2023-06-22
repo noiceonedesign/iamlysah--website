@@ -1,6 +1,6 @@
 <template>
 <div class="popup-wrapper">
-  <div class="popup-container">
+  <div ref="popupContainer" class="popup-container">
     <div class="img-wrapper">
       <img :src="imgPath" alt="">
       <div class="description">
@@ -41,6 +41,7 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import DropDownButton from "./DropDownButton.vue";
+import {useClickOutside} from "../clickOutside";
 
 export default defineComponent({
   name:"MusicPlayerPopUp",
@@ -68,12 +69,13 @@ export default defineComponent({
   emits:["closePopUp"],
 
   setup(props, context){
-
+    const popupContainer = ref(null);
     function closePopUp() {
       context.emit("closePopUp")
     }
 
-    return { closePopUp };
+
+    return { closePopUp, popupContainer };
   }
 })
 </script>
@@ -86,8 +88,8 @@ export default defineComponent({
   height: 100%;
   top: 0;
   left: 0;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   z-index: 100;
   display: flex;
   justify-content: center;

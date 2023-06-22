@@ -34,6 +34,7 @@
       </div>
     </div>
   </main>
+  <Footer/>
 </template>
 
 
@@ -44,10 +45,11 @@ import MusicCardsBig from "../MusicCardBig.ts";
 import { defineComponent, ref } from "vue";
 import MusicPlayerBig from "../components/MusicPlayerBig.vue";
 import MuscicPlayerSmall  from "../components/MusicPlayerSmall.vue"
+import Footer from "../components/Footer.vue";
 
 export default defineComponent({
   name: "Music",
-  components: { MusicPlayerBig, MuscicPlayerSmall, Navbar},
+  components: { Footer, MusicPlayerBig, MuscicPlayerSmall, Navbar },
   setup() {
 
   return { MusicCardsSmall, MusicCardsBig }
@@ -90,7 +92,12 @@ export default defineComponent({
   box-sizing: border-box;
   padding: 8px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 740px) {
+  .site-wrapper {
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - 140px);
+  }
   .flex-box-big {
     flex-direction: row;
     align-items: flex-end;

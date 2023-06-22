@@ -38,15 +38,18 @@ import Navbar from "../components/Navbar.vue";
 }
 
 @media (min-width: 740px) {
+  .background-container {
+    top: -80px;
+  }
   .background-container > img:nth-child(1) {
     width: 1400px;
     margin-left: 200px;
-    top: -80px;
+    top: -10px;
   }
   .background-container > img:nth-child(2) {
     width: 300px;
     left: 64px;
-    bottom: 80px;
+    top: 130px;
   }
 }
 

@@ -1,8 +1,8 @@
 <template>
-  <div class="navbar" :class="[logo ? '' : '']">
+  <div class="navbar">
     <div class="navbar-wrapper">
       <router-link class="logo-desktop" to="/">
-        <img src="/assets/lysah-logo-light.svg" alt="">
+        <img src="/assets/lysah-logo-light.svg" alt="" :class="[logo ? 'logo-opacity-full' : 'logo-opacity-null']">
       </router-link>
       <div @click="clickedBurgerMenuIcon" class="burger-menu">
         <img v-if="!clicked" class="burger-menu-icon" src="/assets/ic_BM-closed-light.svg" alt="">
@@ -15,13 +15,13 @@
       <router-link active-class="active" to="/video">video</router-link>
       <router-link active-class="active" to="/contact">contact</router-link>
     </div>
-  </div>
 
-  <div class="navbar-container-desktop">
-    <router-link active-class="active" to="/music">music</router-link>
-    <router-link active-class="active" to="/about">about</router-link>
-    <router-link active-class="active" to="/video">video</router-link>
-    <router-link active-class="active" to="/contact">contact</router-link>
+    <div class="navbar-container-desktop">
+      <router-link active-class="active" to="/music">music</router-link>
+      <router-link active-class="active" to="/about">about</router-link>
+      <router-link active-class="active" to="/video">video</router-link>
+      <router-link active-class="active" to="/contact">contact</router-link>
+    </div>
   </div>
 </template>
 
@@ -61,7 +61,12 @@ export default defineComponent({
 
 
 <style scoped>
-
+.logo-opacity-null {
+  opacity: 0;
+}
+.logo-opacity-full {
+  opacity: 100%;
+}
 .navbar {
   display: flex;
   height: 80px;
@@ -86,8 +91,13 @@ export default defineComponent({
   display: none;
 }
 .logo-desktop {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: fit-content;
 }
 .logo-desktop > img {
+  margin-top: 8px;
   width: 80px;
 }
 .open {
@@ -138,17 +148,24 @@ export default defineComponent({
 }
 
 
-@media(min-width: 1200px){
+@media(min-width: 740px){
+
+  .navbar {
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 80px;
+  }
+
   .burger-menu {
     display: none;
   }
   .logo-desktop {
-    top: 32px;
-    left: 128px;
-    z-index: 10;
+
   }
   .logo-desktop > img {
     width: 120px;
+    margin-top: 64px;
+    margin-left: -60px;
   }
   .navbar-container-mobile {
     display: none;
@@ -157,10 +174,9 @@ export default defineComponent({
     display: flex;
     flex-direction: row;
     gap: 64px;
-    position: fixed;
-    right: 128px;
-    top: 64px;
-    z-index: 10;
+  }
+  .navbar-wrapper {
+    width: fit-content;
   }
   .navbar-container-desktop > a {
     text-decoration: none;
@@ -175,6 +191,12 @@ export default defineComponent({
     box-shadow: 0 1px 0 0 var(--main-font-color-light);
     font-weight: bold;
     padding-bottom: .5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo-desktop > img {
+    margin-left: 0;
   }
 }
 
