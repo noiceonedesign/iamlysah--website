@@ -1,21 +1,22 @@
 <template>
-  <div class="navbar">
-    <div @click="clickedBurgerMenuIcon" class="burger-menu">
-      <img v-if="!clicked" class="burger-menu-icon" src="/assets/ic_BM-closed-light.svg" alt="">
-      <img v-else class="burger-menu-icon" src="/assets/ic_BM-open-light.svg" alt="">
-    </div>
-    <div ref="navMobile" class="navbar-container-mobile">
-      <div class="links" :class="clicked ? 'open' : 'closed'">
-        <router-link active-class="active" to="/music">music</router-link>
-        <router-link active-class="active" to="/about">about</router-link>
-        <router-link active-class="active" to="/video">video</router-link>
-        <router-link active-class="active" to="/contact">contact</router-link>
+  <div class="navbar" :class="[logo ? '' : '']">
+    <div class="navbar-wrapper">
+      <router-link class="logo-desktop" to="/">
+        <img src="/assets/lysah-logo-light.svg" alt="">
+      </router-link>
+      <div @click="clickedBurgerMenuIcon" class="burger-menu">
+        <img v-if="!clicked" class="burger-menu-icon" src="/assets/ic_BM-closed-light.svg" alt="">
+        <img v-else class="burger-menu-icon" src="/assets/ic_BM-open-light.svg" alt="">
       </div>
     </div>
+    <div class="navbar-container-mobile" :class="clicked ? 'open' : 'closed'">
+      <router-link active-class="active" to="/music">music</router-link>
+      <router-link active-class="active" to="/about">about</router-link>
+      <router-link active-class="active" to="/video">video</router-link>
+      <router-link active-class="active" to="/contact">contact</router-link>
+    </div>
   </div>
-  <router-link v-if="props.logo" class="logo-desktop" to="/">
-    <img src="/assets/lysah-logo-light.svg" alt="">
-  </router-link>
+
   <div class="navbar-container-desktop">
     <router-link active-class="active" to="/music">music</router-link>
     <router-link active-class="active" to="/about">about</router-link>
@@ -25,37 +26,59 @@
 </template>
 
 
-<script setup>
-import { ref } from 'vue'
+<script lang="ts">
+import { ref, defineComponent } from 'vue'
 
-const props = defineProps({
-  logo: {
-    type: Boolean,
-    default: true
+export default defineComponent({
+  name: "Navbar",
+  props: {
+    logo: {
+      type: Boolean,
+      default: true
+    }
+  },
+  setup() {
+    const clicked = ref(false)
+
+    function clickedBurgerMenuIcon() {
+      clicked.value = !clicked.value
+      disableScroll();
+    }
+
+    function disableScroll() {
+      if (clicked.value) {
+        document.body.style.overflow = 'hidden';
+      }
+      else {
+        document.body.style.overflow = 'visible';
+      }
+    }
+    return{ clicked, clickedBurgerMenuIcon }
   }
 })
-
-const clicked = ref(false)
-const navMobile = ref<HTMLDivElement>(HTMLDivElement);
-
-function clickedBurgerMenuIcon() {
-  clicked.value = !clicked.value
-  disableScroll();
-}
-
-function disableScroll() {
-  if (clicked.value) {
-    document.body.style.overflow = 'hidden';
-  }
-  else {
-    document.body.style.overflow = 'visible';
-  }
-}
 
 </script>
 
 
 <style scoped>
+
+.navbar {
+  display: flex;
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  align-items: center;
+  z-index: 20;
+  box-sizing: border-box;
+}
+.navbar-wrapper {
+  display: flex;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
 .active {
   text-decoration: underline;
 }
@@ -63,10 +86,6 @@ function disableScroll() {
   display: none;
 }
 .logo-desktop {
-  position: fixed;
-  top: 24px;
-  left: 32px;
-  z-index: 11;
 }
 .logo-desktop > img {
   width: 80px;
@@ -80,32 +99,32 @@ function disableScroll() {
   transform: translateX(740px);
 }
 
-.navbar-container-mobile > .links {
+.navbar-container-mobile {
   position: absolute;
+  top: 80px;
   background: var(--card-background-color);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100dvh;
+  height: 100vh;
+  z-index: 19;
   width: 100%;
   align-items: center;
   justify-content: center;
 }
-.navbar-container-mobile > .links > a:last-child {
+.navbar-container-mobile > a:last-child {
   border: none;
 }
 .burger-menu {
-  position: fixed;
   display: flex;
-  z-index: 10;
-  right: 24px;
   cursor: pointer;
 }
 .burger-menu > .burger-menu-icon {
   width: 80px;
 }
-.navbar-container-mobile > .links > a {
+.navbar-container-mobile > a {
   text-decoration: none;
   color: var(--main-font-color-light);
   border-bottom: 1px solid white;
@@ -113,7 +132,7 @@ function disableScroll() {
   min-width: 128px;
   text-align: center;
 }
-.navbar-container-mobile > .links > a:hover {
+.navbar-container-mobile > a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
