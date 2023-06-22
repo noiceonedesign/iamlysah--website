@@ -4,7 +4,7 @@
       <img v-if="!clicked" class="burger-menu-icon" src="/assets/ic_BM-closed-light.svg" alt="">
       <img v-else class="burger-menu-icon" src="/assets/ic_BM-open-light.svg" alt="">
     </div>
-    <div class="navbar-container-mobile">
+    <div ref="navMobile" class="navbar-container-mobile">
       <div class="links" :class="clicked ? 'open' : 'closed'">
         <router-link active-class="active" to="/music">music</router-link>
         <router-link active-class="active" to="/about">about</router-link>
@@ -36,6 +36,7 @@ const props = defineProps({
 })
 
 const clicked = ref(false)
+const navMobile = ref<HTMLDivElement>(HTMLDivElement);
 
 function clickedBurgerMenuIcon() {
   clicked.value = !clicked.value
@@ -44,10 +45,10 @@ function clickedBurgerMenuIcon() {
 
 function disableScroll() {
   if (clicked.value) {
-    document.body.style.overflowY = 'hidden';
+    document.body.style.overflow = 'hidden';
   }
   else {
-    document.body.style.overflowY = 'visible';
+    document.body.style.overflow = 'visible';
   }
 }
 
@@ -79,20 +80,8 @@ function disableScroll() {
   transform: translateX(740px);
 }
 
-
-.navbar-container-mobile {
-  position: absolute;
-  height: 100dvh;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  right: 0;
-  z-index: 9;
-  border-radius: 7px 0 0 7px;
-  overflow-y: hidden;
-}
-
 .navbar-container-mobile > .links {
+  position: absolute;
   background: var(--card-background-color);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
