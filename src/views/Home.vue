@@ -19,6 +19,7 @@ import Navbar from "../components/Navbar.vue";
 .background-container {
   position: relative;
   width: 100%;
+  height: 100dvh;
   height: 100vh;
   overflow: hidden;
   display: flex;
