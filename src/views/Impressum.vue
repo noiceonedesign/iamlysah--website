@@ -34,7 +34,6 @@ export default defineComponent({
 <style scoped>
 p {
   margin: 16px 0;
-  color: var(--main-font-color-dark);
 }
 .site-wrapper {
   height: 100dvh;
@@ -44,9 +43,11 @@ p {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-}
-.text-container {
-  width: 1200px;
+  padding-top: 120px;
 }
 
+.text-container {
+  width: 90%;
+  color: var(--main-font-color-light);
+}
 </style>

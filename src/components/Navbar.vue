@@ -27,7 +27,7 @@
 
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent, onMounted } from 'vue'
 
 export default defineComponent({
   name: "Navbar",
@@ -37,8 +37,19 @@ export default defineComponent({
       default: true
     }
   },
-  setup() {
-    const clicked = ref(false)
+  setup(props) {
+    const clicked = ref(false);
+    const backgroundColor = ref(null);
+
+    onMounted(()=> {
+      document.body.style.overflow = 'visible';
+      if (props.logo) {
+        backgroundColor.value = '#AEA69BFF'
+      }
+      else {
+        backgroundColor.value = '#AEA69BFF00'
+      }
+    })
 
     function clickedBurgerMenuIcon() {
       clicked.value = !clicked.value
@@ -53,7 +64,7 @@ export default defineComponent({
         document.body.style.overflow = 'visible';
       }
     }
-    return{ clicked, clickedBurgerMenuIcon }
+    return{ clicked, clickedBurgerMenuIcon, backgroundColor }
   }
 })
 
@@ -75,6 +86,7 @@ export default defineComponent({
   align-items: center;
   z-index: 20;
   box-sizing: border-box;
+  background: v-bind(backgroundColor);
 }
 .navbar-wrapper {
   display: flex;

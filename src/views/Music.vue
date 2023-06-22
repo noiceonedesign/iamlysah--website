@@ -61,8 +61,8 @@ export default defineComponent({
 <style scoped>
 
 .site-wrapper {
-  height: 100dvh;
-  height: 100vh;
+  height: calc(100svh - 60px);
+  height: calc(100vh - 60px);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -102,6 +102,7 @@ export default defineComponent({
     flex-direction: row;
     align-items: flex-end;
     max-width: 1100px;
+    width: 90%;
   }
 
   .flex-box-grid {

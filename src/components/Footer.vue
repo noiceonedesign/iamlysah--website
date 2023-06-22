@@ -30,7 +30,7 @@ export default defineComponent({
   top: 0;
   height: 1px;
   background: var(--main-font-color-light);
-  width: 80%;
+  width: 90%;
 }
 a {
   text-decoration: none;

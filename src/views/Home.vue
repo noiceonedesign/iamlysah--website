@@ -12,6 +12,7 @@
 
 <script setup>
 import Navbar from "../components/Navbar.vue";
+import Footer from "../components/Footer.vue";
 
 </script>
 
@@ -19,7 +20,7 @@ import Navbar from "../components/Navbar.vue";
 .background-container {
   position: relative;
   width: 100%;
-  height: 100dvh;
+  height: 100svh;
   height: 100vh;
   overflow: hidden;
   display: flex;
