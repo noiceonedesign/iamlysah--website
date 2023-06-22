@@ -71,11 +71,11 @@ function disableScroll() {
   width: 80px;
 }
 .open {
-  transition: all ease-in-out 250ms;
+  transition: all ease-in-out 350ms;
   transform: translateX(0px);
 }
 .closed {
-  transition: all ease-in-out 250ms;
+  transition: all ease-in-out 350ms;
   transform: translateX(740px);
 }
 
@@ -89,7 +89,7 @@ function disableScroll() {
   right: 0;
   z-index: 9;
   border-radius: 7px 0 0 7px;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .navbar-container-mobile > .links {

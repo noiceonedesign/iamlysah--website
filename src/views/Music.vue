@@ -66,7 +66,8 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 120px 20px;
+  padding: 0 20px;
+  margin: 60px 0 0;
 }
 
 .flex-box-big {
