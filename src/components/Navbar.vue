@@ -1,7 +1,7 @@
 <template>
   <div @click="clickedBurgerMenuIcon" class="burger-menu">
-    <img v-if="!clicked" class="burger-menu-icon" src="../assets/ic_BM-closed-light.svg" alt="">
-    <img v-else class="burger-menu-icon" src="../assets/ic_BM-open-light.svg" alt="">
+    <img v-if="!clicked" class="burger-menu-icon" src="/assets/ic_BM-closed-light.svg" alt="">
+    <img v-else class="burger-menu-icon" src="/assets/ic_BM-open-light.svg" alt="">
   </div>
   <div v-if="clicked" class="navbar-container-mobile">
     <div class="links">
@@ -12,7 +12,7 @@
     </div>
   </div>
   <router-link v-if="props.logo" class="logo-desktop" to="/">
-    <img src="../assets/lysah-logo-light.svg" alt="">
+    <img src="/assets/lysah-logo-light.svg" alt="">
   </router-link>
   <div class="navbar-container-desktop">
     <router-link active-class="active" to="/music">music</router-link>
