@@ -17,10 +17,10 @@
     </div>
 
     <div class="navbar-container-desktop">
-      <router-link active-class="active" to="/music">music</router-link>
-      <router-link active-class="active" to="/about">about</router-link>
-      <router-link active-class="active" to="/video">video</router-link>
-      <router-link active-class="active" to="/contact">contact</router-link>
+      <router-link active-class="active-link" to="/music">music</router-link>
+      <router-link active-class="active-link" to="/about">about</router-link>
+      <router-link active-class="active-link" to="/video">video</router-link>
+      <router-link active-class="active-link" to="/contact">contact</router-link>
     </div>
   </div>
 </template>
@@ -96,7 +96,7 @@ export default defineComponent({
   align-items: center;
   justify-content: space-between;
 }
-.active {
+.active-link {
   text-decoration: underline;
 }
 .navbar-container-desktop {
@@ -111,6 +111,8 @@ export default defineComponent({
 .logo-desktop > img {
   margin-top: 8px;
   width: 80px;
+  position: relative;
+  z-index: 20;
 }
 .open {
   transition: all ease-in-out 350ms;
@@ -123,13 +125,13 @@ export default defineComponent({
 
 .navbar-container-mobile {
   position: absolute;
-  top: 80px;
+  top: 0px;
   background: var(--card-background-color);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  height: 100svh;
   height: 100vh;
   z-index: 19;
   width: 100%;
@@ -145,6 +147,8 @@ export default defineComponent({
 }
 .burger-menu > .burger-menu-icon {
   width: 80px;
+  position: relative;
+  z-index: 20;
 }
 .navbar-container-mobile > a {
   text-decoration: none;
@@ -189,6 +193,10 @@ export default defineComponent({
   }
   .navbar-wrapper {
     width: fit-content;
+  }
+  .navbar-container-desktop > .active-link {
+    box-shadow: 0 1px 0 0 var(--main-font-color-light);
+    padding-bottom: .5px;
   }
   .navbar-container-desktop > a {
     text-decoration: none;

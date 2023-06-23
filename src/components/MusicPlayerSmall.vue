@@ -191,6 +191,7 @@ export default defineComponent({
   position: absolute;
   background: #FFFFFF10;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   opacity: 100%;
 }
 .pause-button > img {
@@ -301,6 +302,7 @@ export default defineComponent({
      position: absolute;
      background: #FFFFFF10;
      backdrop-filter: blur(4px);
+     -webkit-backdrop-filter: blur(4px);
      opacity: 0;
    }
    .play-button {
@@ -317,6 +319,7 @@ export default defineComponent({
      position: absolute;
      background: #FFFFFF10;
      backdrop-filter: blur(4px);
+     -webkit-backdrop-filter: blur(4px);
      opacity: 100%;
    }
  }

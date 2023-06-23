@@ -33,15 +33,13 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   height:calc(100svh - 140px);
-  height:calc(100vh - 80px);
+  height:calc(100vh - 140px);
   width: 100%;
 }
-
-
-
 @media (min-width: 740px) {
   .site-wrapper {
     height: calc(100dvh - 160px);
+    height: calc(100vh - 160px);
   }
 }
 </style>

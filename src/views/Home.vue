@@ -17,6 +17,9 @@ import Footer from "../components/Footer.vue";
 </script>
 
 <style scoped>
+header {
+  position: absolute;
+}
 .background-container {
   position: relative;
   width: 100%;
@@ -39,9 +42,6 @@ import Footer from "../components/Footer.vue";
 }
 
 @media (min-width: 740px) {
-  .background-container {
-    top: -80px;
-  }
   .background-container > img:nth-child(1) {
     width: 1400px;
     margin-left: 200px;

@@ -1,5 +1,7 @@
 <template>
-  <Navbar/>
+  <header>
+    <Navbar/>
+  </header>
   <main>
     <div class="site-wrapper">
       <div class="text-container">
@@ -56,9 +58,8 @@ p {
     width: 80%;
     justify-content: flex-start;
     align-items: flex-start;
-    height: calc(100svh - 100px);
-    height: calc(100vh - 100px);
-    padding-top: 120px;
+    height: calc(100svh - 160px);
+    height: calc(100vh - 160px);
   }
   p {
     padding: 0 16px;

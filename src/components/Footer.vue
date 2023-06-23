@@ -3,11 +3,21 @@
     <div class="footer-content">
       <router-link to="/impressum">Impressum</router-link>
       <div class="social-media-wrapper">
-        <a href=""><img src="/assets/ic_apple-music-footer.svg"></a>
-        <a href=""><img src="/assets/ic_instagram-footer.svg"></a>
-        <a href=""><img src="/assets/ic_spotify-footer.svg"></a>
-        <a href=""><img src="/assets/ic_facebook-footer.svg"></a>
-        <a href=""><img src="/assets/ic_youtube-footer.svg"></a>
+        <a href="https://music.apple.com/at/artist/lysah/1105341781?l=en" target="_blank">
+          <img src="/assets/ic_apple-music-footer.svg">
+        </a>
+        <a href="https://www.instagram.com/iamlysah" target="_blank">
+          <img src="/assets/ic_instagram-footer.svg">
+        </a>
+        <a href="https://open.spotify.com/artist/5SjM2ojBf2nyI1DYn2kIBd?si=7Zh4pfqjQbGaFPcXHXamPQ" target="_blank">
+          <img src="/assets/ic_spotify-footer.svg">
+        </a>
+        <a href="https://www.facebook.com/iamlysah/" target="_blank">
+          <img src="/assets/ic_facebook-footer.svg">
+        </a>
+        <a href="https://www.youtube.com/lysah" target="_blank">
+          <img src="/assets/ic_youtube-footer.svg">
+        </a>
       </div>
     </div>
   </div>
@@ -88,7 +98,7 @@ a {
 }
 
 .footer-content > .social-media-wrapper > a > img {
-  height: 32px;
+  height: 24px;
 }
 
 
