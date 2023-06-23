@@ -48,10 +48,17 @@ a {
   color: var(--main-font-color-light);
 }
 
+.footer-content > a {
+  opacity: 50%;
+  transition: all 50ms ease-in-out;
+}
+
 .footer-content > a:hover {
   cursor: pointer;
   box-shadow: 0 1px 0 0 var(--main-font-color-light);
   padding-bottom: .5px;
+  opacity: 100%;
+  transition: all 50ms ease-in-out;
 }
 
 .footer-content {
@@ -96,6 +103,7 @@ a {
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
 </style>
