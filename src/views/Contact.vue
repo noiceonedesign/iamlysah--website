@@ -32,8 +32,8 @@ export default defineComponent({
 .site-wrapper {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
-  height: 100vh;
+  height:calc(100svh - 140px);
+  height:calc(100vh - 80px);
   width: 100%;
 }
 

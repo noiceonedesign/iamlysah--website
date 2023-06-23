@@ -2,9 +2,19 @@
   <div ref="dropDownContainer" class="drop-down-container">
     <div
         @click="handleClick()"
+        class="button-wrapper"
         :class="[isSecondary ? 'button-wrapper-secondary' : 'button-wrapper-primary']">
-      <img src="" alt="">
       <p> {{ buttonText }}</p>
+      <span :class="[expanded ? 'face-down' : 'face-up']">
+        <img v-if="!isSecondary"
+             src="/assets/ic_drop-down-light.svg"
+             alt="drop-down image"
+        >
+        <img v-else
+             src="/assets/ic_drop-down-dark.svg"
+             alt="drop-down image"
+        >
+      </span>
     </div>
     <div v-if="isBuyButton && expanded"  class="options-wrapper">
       <div class="option" v-for="(option, index) in buyOptions"
@@ -127,7 +137,7 @@ export default defineComponent({
   padding: 8px 16px;
   border-radius: 7px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   transition: all ease 150ms;
 }
 .button-wrapper-primary:hover {
@@ -144,7 +154,7 @@ export default defineComponent({
   padding: 8px 16px;
   border-radius: 7px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   transition: all ease 150ms;
 }
 .button-wrapper-secondary:hover {
@@ -191,5 +201,16 @@ export default defineComponent({
 }
 
 
+.button-wrapper > span > img {
+  width: 16px;
+}
+.button-wrapper > .face-up {
+  rotate: 0deg;
+  transition: all 150ms ease-in-out;
+}
+.button-wrapper > .face-down {
+  rotate: 180deg;
+  transition: all 150ms ease-in-out;
+}
 
 </style>

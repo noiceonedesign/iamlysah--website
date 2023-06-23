@@ -243,7 +243,7 @@ export default defineComponent({
      background: var(--card-background-color);
    }
    .component-wrapper:hover {
-     background: var(--card-background-color);
+     background: var(--card-background-color-hover);
      cursor: pointer;
    }
 
