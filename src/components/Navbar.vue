@@ -199,11 +199,6 @@ export default defineComponent({
     box-shadow: 0 1px 0 0 var(--main-font-color-light);
     padding-bottom: .5px;
   }
-  .navbar-container-desktop > .active {
-    box-shadow: 0 1px 0 0 var(--main-font-color-light);
-    font-weight: bold;
-    padding-bottom: .5px;
-  }
 }
 
 @media (min-width: 1200px) {

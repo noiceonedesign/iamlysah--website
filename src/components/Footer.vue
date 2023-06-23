@@ -91,10 +91,6 @@ a {
   height: 32px;
 }
 
-.footer-content > .social-media-wrapper > a:nth-child(1) > img {
-  height: 16px;
-}
-
 
 @media(min-width: 740px) {
   .footer-wrapper {
