@@ -41,7 +41,7 @@ export default defineComponent({
 
 @media (min-width: 740px) {
   .site-wrapper {
-    height: calc(100dvh - 140px);
+    height: calc(100dvh - 160px);
   }
 }
 </style>

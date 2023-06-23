@@ -96,7 +96,7 @@ export default defineComponent({
   .site-wrapper {
     padding: 0;
     margin: 0;
-    height: calc(100vh - 140px);
+    height: calc(100vh - 160px);
   }
   .flex-box-big {
     flex-direction: row;
