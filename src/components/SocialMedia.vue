@@ -71,7 +71,7 @@ export default defineComponent({
     transition: all 100ms ease-in-out;
   }
   .social-media-component-wrapper > div > a > img {
-    width: 32px;
+    width: 24px;
   }
 }
 </style>
