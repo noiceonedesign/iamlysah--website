@@ -184,12 +184,11 @@ export default defineComponent({
   text-decoration: underline;
 }
 .navbar-container-mobile > .social-media-icon-container {
-  position: absolute;
-  bottom: 10%;
   display: flex;
   width: 100%;
   justify-content: center;
   gap: 32px;
+  margin-top: 64px;
 }
 .social-media-icon-container > div {
   display: flex;
