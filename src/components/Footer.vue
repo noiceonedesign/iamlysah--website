@@ -2,22 +2,26 @@
   <div class="footer-wrapper">
     <div class="footer-content">
       <router-link to="/impressum">Impressum</router-link>
-      <div class="social-media-wrapper">
-        <a href="https://music.apple.com/at/artist/lysah/1105341781?l=en" target="_blank">
-          <img src="/assets/ic_apple-music-footer.svg">
-        </a>
-        <a href="https://www.instagram.com/iamlysah" target="_blank">
-          <img src="/assets/ic_instagram-footer.svg">
-        </a>
-        <a href="https://open.spotify.com/artist/5SjM2ojBf2nyI1DYn2kIBd?si=7Zh4pfqjQbGaFPcXHXamPQ" target="_blank">
-          <img src="/assets/ic_spotify-footer.svg">
-        </a>
-        <a href="https://www.facebook.com/iamlysah/" target="_blank">
-          <img src="/assets/ic_facebook-footer.svg">
-        </a>
-        <a href="https://www.youtube.com/lysah" target="_blank">
-          <img src="/assets/ic_youtube-footer.svg">
-        </a>
+      <div class="social-media-container">
+        <div class="social-media-icons">
+          <a href="https://www.instagram.com/iamlysah" target="_blank">
+            <img src="/assets/ic_instagram-footer.svg">
+          </a>
+          <a href="https://www.facebook.com/iamlysah/" target="_blank">
+            <img src="/assets/ic_facebook-footer.svg">
+          </a>
+        </div>
+        <div class="listen-icons">
+          <a href="https://music.apple.com/at/artist/lysah/1105341781?l=en" target="_blank">
+            <img src="/assets/ic_apple-music-footer.svg">
+          </a>
+          <a href="https://open.spotify.com/artist/5SjM2ojBf2nyI1DYn2kIBd?si=7Zh4pfqjQbGaFPcXHXamPQ" target="_blank">
+            <img src="/assets/ic_spotify-footer.svg">
+          </a>
+          <a href="https://www.youtube.com/lysah" target="_blank">
+            <img src="/assets/ic_youtube-footer.svg">
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -59,8 +63,10 @@ a {
 }
 
 .footer-content > a {
-  opacity: 50%;
-  transition: all 50ms ease-in-out;
+  opacity: 70%;
+  transition: all 100ms ease-in-out;
+  box-shadow: 0 1px 0 0 #FFFFFF00;
+  padding-bottom: .5px;
 }
 
 .footer-content > a:hover {
@@ -68,7 +74,7 @@ a {
   box-shadow: 0 1px 0 0 var(--main-font-color-light);
   padding-bottom: .5px;
   opacity: 100%;
-  transition: all 50ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 .footer-content {
@@ -80,25 +86,14 @@ a {
   width: 90%;
 }
 
-.footer-content > .social-media-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 32px;
-}
-
-.footer-content > .social-media-wrapper > a {
-  opacity: 50%;
-  transition: all 50ms ease-in-out;
-}
 
 .footer-content > .social-media-wrapper > a:hover {
   opacity: 100%;
   transition: all 50ms ease-in-out;
 }
 
-.footer-content > .social-media-wrapper > a > img {
-  height: 24px;
+.social-media-container {
+  display: none;
 }
 
 
@@ -110,6 +105,35 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  .social-media-container {
+    display: flex;
+    gap: 64px;
+
+  }
+  .social-media-container > div {
+    display: flex;
+    gap: 16px;
+  }
+  .social-media-container > div > a {
+    display: flex;
+    opacity: 60%;
+    transition: all 100ms ease-in-out;
+  }
+  .social-media-container > div > a:hover {
+    display: flex;
+    opacity: 100%;
+    transition: all 100ms ease-in-out;
+  }
+  .social-media-container > div > a > img{
+    width: 24px;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .social-media-container {
+    display: none;
   }
 }
 </style>

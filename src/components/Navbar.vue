@@ -14,6 +14,27 @@
       <router-link active-class="active" to="/about">about</router-link>
       <router-link active-class="active" to="/video">video</router-link>
       <router-link active-class="active" to="/contact">contact</router-link>
+      <div class="social-media-icon-container">
+        <div class="social-media-icons">
+          <a href="https://www.instagram.com/iamlysah" target="_blank">
+            <img src="/assets/ic_instagram-footer.svg">
+          </a>
+          <a href="https://www.facebook.com/iamlysah/" target="_blank">
+            <img src="/assets/ic_facebook-footer.svg">
+          </a>
+        </div>
+        <div class="listen-icons">
+          <a href="https://music.apple.com/at/artist/lysah/1105341781?l=en" target="_blank">
+            <img src="/assets/ic_apple-music-footer.svg">
+          </a>
+          <a href="https://open.spotify.com/artist/5SjM2ojBf2nyI1DYn2kIBd?si=7Zh4pfqjQbGaFPcXHXamPQ" target="_blank">
+            <img src="/assets/ic_spotify-footer.svg">
+          </a>
+          <a href="https://www.youtube.com/lysah" target="_blank">
+            <img src="/assets/ic_youtube-footer.svg">
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="navbar-container-desktop">
@@ -162,7 +183,24 @@ export default defineComponent({
   cursor: pointer;
   text-decoration: underline;
 }
-
+.navbar-container-mobile > .social-media-icon-container {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 32px;
+}
+.social-media-icon-container > div {
+  display: flex;
+  gap: 32px;
+}
+.social-media-icon-container > div > a {
+  display: flex;
+}
+.social-media-icon-container > div > a > img {
+  width: 32px;
+}
 
 @media(min-width: 740px){
 

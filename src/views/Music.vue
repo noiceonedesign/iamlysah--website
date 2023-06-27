@@ -4,6 +4,7 @@
   </header>
   <main>
     <div class="site-wrapper">
+      <SocailMedia/>
       <div class="flex-box-big">
         <div class="flex-box-wrapper">
           <MusicPlayerBig v-for="(musicCardBig, index) in MusicCardsBig"
@@ -46,10 +47,11 @@ import { defineComponent, ref } from "vue";
 import MusicPlayerBig from "../components/MusicPlayerBig.vue";
 import MuscicPlayerSmall  from "../components/MusicPlayerSmall.vue"
 import Footer from "../components/Footer.vue";
+import SocailMedia from "../components/SocialMedia.vue";
 
 export default defineComponent({
   name: "Music",
-  components: { Footer, MusicPlayerBig, MuscicPlayerSmall, Navbar },
+  components: {SocailMedia, Footer, MusicPlayerBig, MuscicPlayerSmall, Navbar },
   setup() {
 
   return { MusicCardsSmall, MusicCardsBig }
@@ -103,6 +105,8 @@ export default defineComponent({
     align-items: flex-end;
     max-width: 1100px;
     width: 90%;
+    position: relative;
+    z-index: 2;
   }
 
   .flex-box-grid {

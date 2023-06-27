@@ -35,7 +35,7 @@
       />
     </div>
     <div class="mobile-setting-container">
-      <img src="/assets/ic_settings.svg" alt="" @click="handleSettings">
+      <img src="/assets/ic_settings.svg" alt="" @click="openSettings">
     </div>
   </div>
   <MusicPlayerPopUp
@@ -48,13 +48,13 @@
       :apple-music-u-r-l="appleMusicURL"
       :spotify-u-r-l="spotifyURL"
       :amazon-music-u-r-l="amazonMusicURL"
-      @closePopUp="handleSettings"
+      @closePopUp="closeSettings"
   />
 
 </template>
 
 <script lang="ts">
-import {defineComponent, ref} from "vue";
+import {defineComponent, ref, onMounted} from "vue";
 import DropDownButton from "./DropDownButton.vue";
 import MusicPlayerPopUp from "./MusicPlayerPopUp.vue";
 export default defineComponent({
@@ -92,6 +92,9 @@ export default defineComponent({
     const audio = ref<HTMLAudioElement>();
     const settingsActive = ref(false);
 
+    onMounted(()=> {
+      document.body.style.overflow = 'visible';
+    })
     function pressPlay() {
       playing.value = !playing.value;
       if (playing.value) {
@@ -105,11 +108,23 @@ export default defineComponent({
       playing.value = false
     }
 
-    function handleSettings() {
-      settingsActive.value = !settingsActive.value
+    function openSettings() {
+      settingsActive.value = true;
+      disableScroll();
+    }
+    function closeSettings() {
+      settingsActive.value = false;
+      disableScroll();
+    }
+    function disableScroll() {
+      if (settingsActive.value) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'visible';
+      }
     }
 
-    return { audio, pressPlay, playing, songEnd, settingsActive, handleSettings };
+    return { audio, pressPlay, playing, songEnd, settingsActive, openSettings, closeSettings };
   }
 })
 
@@ -247,7 +262,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8px;
+    padding: 16px;
     box-sizing: border-box;
     gap: 16px;
     background: var(--background-color-light);
@@ -265,7 +280,7 @@ export default defineComponent({
     position: relative;
   }
   .component-wrapper > .img-container > img {
-    width: 332px;
+    width: 316px;
     border-radius: 7px;
     box-shadow: var(--box-shadow);
   }
@@ -344,7 +359,7 @@ export default defineComponent({
   .description {
     display: flex;
     flex-direction: column;
-    padding: 0 8px;
+    padding: 0;
     position: relative;
     gap: 1px;
   }

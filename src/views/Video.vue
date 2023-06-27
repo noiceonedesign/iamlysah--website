@@ -4,6 +4,7 @@
   </header>
   <main>
     <div class="site-wrapper">
+      <SocailMedia/>
       <div class="video-wrapper">
         <iframe
             src="https://www.youtube.com/embed/iqNRVlaecUw"
@@ -24,10 +25,11 @@
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 import {ref, defineComponent} from "vue";
+import SocailMedia from "../components/SocialMedia.vue";
 
 export default defineComponent({
   name:"Video",
-  components: {Navbar,Footer},
+  components: {SocailMedia, Navbar,Footer},
   setup() {
     return {}
   }
@@ -43,6 +45,7 @@ export default defineComponent({
   height:calc(100svh - 140px);
   height:calc(100vh - 140px);
   width: 100%;
+
 }
 .video-wrapper{
   display: flex;
@@ -70,6 +73,10 @@ iframe {
   iframe {
     width: 800px;
     height: 452px;
+  }
+  .site-wrapper {
+    position: relative;
+    z-index: 2;
   }
 }
 

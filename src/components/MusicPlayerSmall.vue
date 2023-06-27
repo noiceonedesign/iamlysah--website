@@ -19,7 +19,7 @@
       <p class="artist">{{ artist }}</p>
     </div>
     <div class="mobile-setting-container">
-      <img src="/assets/ic_settings.svg" alt="" @click="handleSettings">
+      <img src="/assets/ic_settings.svg" alt="" @click="openSettings">
     </div>
   </div>
     <MusicPlayerPopUp
@@ -32,7 +32,7 @@
         :apple-music-u-r-l="appleMusicURL"
         :spotify-u-r-l="spotifyURL"
         :amazon-music-u-r-l="amazonMusicURL"
-        @closePopUp="handleSettings"
+        @closePopUp="closeSettings"
     />
   </div>
   <div class="desktop-player">
@@ -77,7 +77,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
 import DropDownButton from "./DropDownButton.vue";
 import MusicPlayerPopUp from "./MusicPlayerPopUp.vue";
 
@@ -122,6 +122,9 @@ export default defineComponent({
     const mouseOver = ref(false);
     const settingsActive = ref(false);
 
+    onMounted(()=> {
+      document.body.style.overflow = 'visible';
+    })
     function pressPlay() {
       playing.value = !playing.value;
       if (playing.value) {
@@ -138,15 +141,27 @@ export default defineComponent({
     function setActive() {
       context.emit("setActive")
     }
-    function handleSettings() {
-      settingsActive.value = !settingsActive.value
+    function openSettings() {
+      settingsActive.value = true;
+      disableScroll();
+    }
+    function closeSettings() {
+      settingsActive.value = false;
+      disableScroll();
     }
 
     function getImageURL() {
       return new URL(`/assets/MusicPlayerPics/${ props.imgPath }`, import.meta.url).href
     }
 
-    return { audio, pressPlay, playing, songEnd, mouseOver, settingsActive, handleSettings, getImageURL };
+    function disableScroll() {
+      if (settingsActive.value) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'visible';
+      }
+    }
+    return { audio, pressPlay, playing, songEnd, mouseOver, settingsActive, openSettings, closeSettings, getImageURL };
   }
 })
 </script>

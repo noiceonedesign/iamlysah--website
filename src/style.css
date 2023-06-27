@@ -47,7 +47,6 @@ main {
 header:has(.logo-opacity-null) {
   height: 0;
 }
-
 @media (min-width: 740px) {
   header {
     height: 80px;

@@ -135,9 +135,10 @@ export default defineComponent({
   background: var(--cta-color);
   color: var(--main-font-color-light);
   padding: 8px 16px;
+  box-sizing: border-box;
   border-radius: 7px;
   display: flex;
-  justify-content: space-between;
+  gap: 16px;
   transition: all ease 150ms;
 }
 .button-wrapper-primary:hover {
@@ -149,17 +150,19 @@ export default defineComponent({
 .button-wrapper-secondary {
   max-width: 320px;
   width: 120px;
-  border: 1px solid var(--cta-color);
+  box-sizing: border-box;
+  border: 1px solid #00000000;
   color: var(--cta-color);
   padding: 8px 16px;
   border-radius: 7px;
   display: flex;
-  justify-content: space-between;
+  gap: 16px;
+  justify-content: flex-start;
   transition: all ease 150ms;
 }
 .button-wrapper-secondary:hover {
   cursor: pointer;
-  background: var(--secondary-button-hover-color);
+  border: 1px solid var(--cta-color);
   transition: all ease 150ms;
 }
 
@@ -212,5 +215,7 @@ export default defineComponent({
   rotate: 180deg;
   transition: all 150ms ease-in-out;
 }
-
+.button-wrapper > p {
+  margin-right: auto;
+}
 </style>
