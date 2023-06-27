@@ -10,6 +10,9 @@
           <a href="https://www.facebook.com/iamlysah/" target="_blank">
             <img src="/assets/ic_facebook-footer.svg">
           </a>
+          <a href="https://www.tiktok.com/@iamlysah/" target="_blank">
+            <img src="/assets/ic_tiktok.svg">
+          </a>
         </div>
         <div class="listen-icons">
           <a href="https://music.apple.com/at/artist/lysah/1105341781?l=en" target="_blank">

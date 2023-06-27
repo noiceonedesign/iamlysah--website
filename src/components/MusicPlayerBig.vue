@@ -258,14 +258,14 @@ export default defineComponent({
   .component-wrapper {
     height: fit-content;
     width: 350px;
-    border-radius: 14px;
+    border-radius: 14px 0 0 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 16px;
     box-sizing: border-box;
     gap: 16px;
-    background: var(--background-color-light);
+    background: var(--card-background-color);
   }
   .component-wrapper:hover {
     cursor: pointer;
@@ -356,10 +356,12 @@ export default defineComponent({
     flex-direction: column;
     width: 100%;
   }
+  .description, .button-container {
+    padding: 0 16px;
+  }
   .description {
     display: flex;
     flex-direction: column;
-    padding: 0;
     position: relative;
     gap: 1px;
   }
@@ -380,6 +382,7 @@ export default defineComponent({
     display: flex;
     width: 100%;
     justify-content: space-between;
+    box-sizing: border-box;
   }
 }
 

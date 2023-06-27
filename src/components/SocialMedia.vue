@@ -1,13 +1,5 @@
 <template>
   <div class="social-media-component-wrapper">
-    <div class="social-media-icons">
-      <a href="https://www.instagram.com/iamlysah" target="_blank">
-        <img src="/assets/ic_instagram-footer.svg">
-      </a>
-      <a href="https://www.facebook.com/iamlysah/" target="_blank">
-        <img src="/assets/ic_facebook-footer.svg">
-      </a>
-    </div>
     <div class="listen-icons">
       <a href="https://music.apple.com/at/artist/lysah/1105341781?l=en" target="_blank">
         <img src="/assets/ic_apple-music-footer.svg">
@@ -17,6 +9,17 @@
       </a>
       <a href="https://www.youtube.com/lysah" target="_blank">
         <img src="/assets/ic_youtube-footer.svg">
+      </a>
+    </div>
+    <div class="social-media-icons">
+      <a href="https://www.instagram.com/iamlysah" target="_blank">
+        <img src="/assets/ic_instagram-footer.svg">
+      </a>
+      <a href="https://www.facebook.com/iamlysah/" target="_blank">
+        <img src="/assets/ic_facebook-footer.svg">
+      </a>
+      <a href="https://www.tiktok.com/@iamlysah/" target="_blank">
+        <img src="/assets/ic_tiktok.svg">
       </a>
     </div>
   </div>
@@ -57,7 +60,7 @@ export default defineComponent({
   .social-media-component-wrapper > div {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
   }
   .social-media-component-wrapper > div > a {
     display: flex;
@@ -71,7 +74,7 @@ export default defineComponent({
     transition: all 100ms ease-in-out;
   }
   .social-media-component-wrapper > div > a > img {
-    width: 24px;
+    width: 28px;
   }
 }
 </style>

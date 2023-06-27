@@ -3,6 +3,7 @@
     <Navbar :logo="false"/>
   </header>
   <main>
+    <SocailMedia/>
     <div class="background-container">
       <img src="/assets/Lisa_Home_BG-small.jpg" alt="background image">
       <img src="/assets/Lysah_Logo_Lysah_Logo.svg" alt="Logo">
@@ -13,6 +14,7 @@
 <script setup>
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
+import SocailMedia from "../components/SocialMedia.vue";
 
 </script>
 
@@ -78,10 +80,8 @@ header {
   .background-container > img:nth-child(2) {
     position: absolute;
     width: 400px;
-    left: 120px;
-    top: 178px;
+    left: 10%;
+    top: 300px;
   }
 }
-
-
 </style>

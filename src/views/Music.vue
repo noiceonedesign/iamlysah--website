@@ -103,14 +103,16 @@ export default defineComponent({
   .flex-box-big {
     flex-direction: row;
     align-items: flex-end;
-    max-width: 1100px;
+    max-width: 900px;
     width: 90%;
     position: relative;
     z-index: 2;
+    gap: 0;
   }
 
   .flex-box-grid {
     height: 463px;
+    border-radius: 0 14px 14px 0;
   }
   .flex-box-wrapper:nth-child(1) {
     width: fit-content;
