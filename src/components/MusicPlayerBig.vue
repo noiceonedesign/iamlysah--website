@@ -356,8 +356,9 @@ export default defineComponent({
     flex-direction: column;
     width: 100%;
   }
-  .description, .button-container {
-    padding: 0 16px;
+  .description,
+  .button-container {
+    padding: 0 8px;
   }
   .description {
     display: flex;

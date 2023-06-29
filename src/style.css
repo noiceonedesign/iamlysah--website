@@ -4,6 +4,8 @@
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--main-font-color-light);
 
   --main-font-color-light: #F3F0EB;
   --main-font-color-dark: #2A2828;
@@ -16,7 +18,7 @@
   --card-background-color: #FFFFFF40;
   --card-background-color-hover: #FFFFFF20;
 
-  --secondary-button-hover-color: #BCC6DA;
+  --secondary-button-hover-color: #BCC6DA60;
 
   --box-shadow: 2px 3px 20px 6px #59433E20;
 
@@ -28,9 +30,8 @@ body {
   background: rgb(174,166,155);
  /* background: linear-gradient(180deg, rgba(174,166,155,1) 35%, rgba(174,166,155,1) 66%, rgba(216,206,193,1) 100%);*/
 }
-
 #app {
-
+ height: 100%;
 }
 p {
   margin: 0;

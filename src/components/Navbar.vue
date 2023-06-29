@@ -188,8 +188,10 @@ export default defineComponent({
 }
 .navbar-container-mobile > .social-media-icon-container {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
+  align-items: center;
   gap: 32px;
   margin-top: 64px;
 }

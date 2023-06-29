@@ -151,7 +151,7 @@ export default defineComponent({
   max-width: 320px;
   width: 120px;
   box-sizing: border-box;
-  border: 1px solid #00000000;
+  border: 1px solid var(--cta-color);
   color: var(--cta-color);
   padding: 8px 16px;
   border-radius: 7px;
@@ -162,7 +162,7 @@ export default defineComponent({
 }
 .button-wrapper-secondary:hover {
   cursor: pointer;
-  border: 1px solid var(--cta-color);
+  background: var(--secondary-button-hover-color);
   transition: all ease 150ms;
 }
 
@@ -209,11 +209,11 @@ export default defineComponent({
 }
 .button-wrapper > .face-up {
   rotate: 0deg;
-  transition: all 150ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 .button-wrapper > .face-down {
   rotate: 180deg;
-  transition: all 150ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 .button-wrapper > p {
   margin-right: auto;

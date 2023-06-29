@@ -4,7 +4,7 @@
   </header>
   <main>
     <div class="site-wrapper">
-
+    <SocailMedia/>
     </div>
   </main>
   <footer>
@@ -16,10 +16,11 @@
 import {defineComponent, ref} from "vue";
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
+import SocailMedia from "../components/SocialMedia.vue";
 
 export default defineComponent({
   name:"About",
-  components: { Footer, Navbar },
+  components: {SocailMedia, Footer, Navbar },
   setup() {
     return {}
   }
