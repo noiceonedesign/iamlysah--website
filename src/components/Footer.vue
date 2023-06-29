@@ -98,7 +98,48 @@ a {
 .social-media-container {
   display: none;
 }
-
+.subscribe-button-wrapper {
+  position: absolute;
+  z-index: 5;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  top: -120px;
+}
+.subscribe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 280px;
+  padding: 16px 0;
+  border-radius: 20px 20px 0 0;
+  border-left: 1px solid var(--main-font-color-light);
+  border-right: 1px solid var(--main-font-color-light);
+  border-top: 1px solid var(--main-font-color-light);
+}
+.subscribe-button {
+  width: fit-content;
+  background: var(--cta-color);
+  color: var(--main-font-color-light);
+  padding: 8px 16px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  display: flex;
+  gap: 16px;
+  transition: all ease 150ms;
+  text-decoration: none;
+}
+.subscribe-button > img {
+  width: 16px;
+  rotate: 90deg;
+}
+.subscribe-button:hover {
+  cursor: pointer;
+  background: var(--cta-color-hover);
+  transition: all ease 150ms;
+}
 
 @media(min-width: 740px) {
   .footer-wrapper {
@@ -133,10 +174,10 @@ a {
   }
 }
 
-
 @media (min-width: 1400px) {
   .social-media-container {
     display: none;
   }
+
 }
 </style>
