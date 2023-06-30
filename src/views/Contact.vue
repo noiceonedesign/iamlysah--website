@@ -6,8 +6,7 @@
     <div class="site-wrapper">
       <div class="content-wrapper">
         <div class="img-outlines-container">
-          <div class="img-wrapper">
-          </div>
+          <div class="img-wrapper"></div>
         </div>
         <div class="social-media-container">
           <h3>Social Media</h3>
@@ -24,7 +23,7 @@
           </div>
         </div>
         <div class="img-outlines-container-2">
-          <div class="img-wrapper"></div>
+          <div class="img-wrapper-2"></div>
         </div>
         <div class="music-listen-container">
           <h3>Music</h3>
@@ -52,7 +51,7 @@
           <p>to my newsletter</p>
           <a  target="_blank"
               class="subscribe-button"
-              href="https://iamlysah.us21.list-manage.com/subscribe/post?u=26859dd5e00b536655a42c1bf&amp;id=e110d0e4eb&amp;f_id=00395ee1f0">
+              href="http://eepurl.com/is6DQk">
             <span>sign up</span><img src="/assets/ic_drop-down-light.svg" alt="">
           </a>
         </div>
@@ -101,6 +100,20 @@ h3 {
   justify-self: center;
   box-shadow: var(--box-shadow);
 }
+.img-wrapper-2 {
+  height: 350px;
+  width: 250px;
+  border-radius: 120px 20px 120px 120px;
+  background-image: url("/assets/lysah-back-piano.jpeg");
+  background-repeat: no-repeat;
+  background-position-y:-20px;
+  background-position-x:0px;
+  background-size: 250px;
+  overflow: hidden;
+  justify-self: center;
+  box-shadow: var(--box-shadow);
+}
+
 
 .img-outlines-container {
   position: relative;
@@ -367,10 +380,13 @@ button:hover {
     grid-template-columns: repeat(2, 1fr);
     max-width: 800px;
     margin-bottom: 60px;
+    gap: 32px;
   }
   .social-media-container{
     justify-content: center;
     padding-bottom: 16px;
+    grid-column: 2;
+    grid-row: 2;
   }
   .music-listen-container {
     padding-top: 16px;
@@ -380,7 +396,7 @@ button:hover {
   }
   .img-outlines-container-2 {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
   }
   .img-outlines-container-2 > .img-wrapper {
     border-radius: 120px 120px 120px 20px;

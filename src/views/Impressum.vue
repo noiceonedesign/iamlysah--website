@@ -7,7 +7,7 @@
       <div class="text-container">
         <h1>Impressum</h1>
         <p>Informationen und Offenlegung gemäß §5 (1) ECG, § 25 MedienG, § 63 GewO und § 14 UGB</p>
-        <p>Webseitenbetreiber: Lysah</p>
+        <p>Webseitenbetreiber: Red Productions</p>
         <p>Anschrift: Arakawastraße 10/17, 1220 Wien, Österreich</p>
         <p>UID-Nr: ATU74747278</p>
         <p>Tel: +43 660 6959724</p>
