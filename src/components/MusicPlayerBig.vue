@@ -256,7 +256,7 @@ export default defineComponent({
     display: none;
   }
   .component-wrapper {
-    height: fit-content;
+    height: 463px;
     width: 350px;
     border-radius: 14px 0 0 14px;
     display: flex;
