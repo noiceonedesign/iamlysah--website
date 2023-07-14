@@ -84,4 +84,10 @@ header {
     top: 300px;
   }
 }
+@media (min-width: 1920px) {
+
+  .background-container > img:nth-child(1) {
+    width: 100%;
+  }
+}
 </style>
