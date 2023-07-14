@@ -134,7 +134,7 @@ export default defineComponent({
 @media (min-width: 1400px) {
   .social-media-component-wrapper {
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     width: 90%;
     height: 100%;
     display: flex;
