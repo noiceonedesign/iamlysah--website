@@ -19,7 +19,7 @@
               her catchy melodies stay with you long after listening
             </p>
             <p>
-              <span>Sail</span> - Lysahs most popular release to date- has since amassed <span>over 100.00 streams</span>
+              <span>Sail</span> - Lysahs most popular release to date- has since amassed <span>over 100.000 streams</span>
               combined and was remixed by DJ Selecta.
             </p>
           </div>
@@ -33,7 +33,7 @@
           during her pop music studies in the creative capital <span>London</span>.
           Although Lysah has since moved on from heavy power ballads, she still incorporates dramatic elements such as
           <span>live strings</span> into her music, making her sound distinctive and honest. Her heavy involvement in the production of her songs
-          strengthens her identity as an artist and makes every song unmistakably <span>her</span>.
+          strengthens her identity as an artist and makes every song unmistakably <span class="italic-styling">her</span>.
         </p>
         <p>
           In 2019, when the <span>city of Vienna</span> created a <span>documentary</span> about the importance of music to the city,
@@ -89,7 +89,6 @@ p {
 }
 p > span {
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .img-wrapper {
@@ -149,7 +148,10 @@ p > span {
   border-right: 1px solid var(--main-font-color-light);
   z-index: -1;
 }
-
+.italic-styling {
+  font-style: italic;
+  font-weight: normal;
+}
 @media(min-width: 740px) {
   h3 {
     font-family: var(--header-font);
