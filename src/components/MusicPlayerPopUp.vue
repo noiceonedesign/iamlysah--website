@@ -94,6 +94,7 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--main-font-color-dark);
 }
 .popup-container {
   height: 500px;
@@ -103,7 +104,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px;
+  padding: 32px;
   box-sizing: border-box;
 }
 

@@ -125,21 +125,24 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
 .drop-down-container {
   display: flex;
   position: relative;
+  max-width: 320px;
+  width: 110px;
+  height: 40px;
+  box-sizing: border-box;
+  align-items: center;
 }
 .button-wrapper-primary {
-  max-width: 320px;
-  width: 120px;
   background: var(--cta-color);
   color: var(--main-font-color-light);
-  padding: 8px 16px;
-  box-sizing: border-box;
   border-radius: 7px;
   display: flex;
-  gap: 16px;
   transition: all ease 150ms;
+  width: 100%;
+  padding: 8px;
 }
 .button-wrapper-primary:hover {
   cursor: pointer;
@@ -148,22 +151,19 @@ export default defineComponent({
 }
 
 .button-wrapper-secondary {
-  max-width: 320px;
-  width: 120px;
-  box-sizing: border-box;
+  width: 100%;
   border: 1px solid var(--cta-color);
   color: var(--cta-color);
-  padding: 8px 16px;
   border-radius: 7px;
   display: flex;
-  gap: 16px;
   justify-content: flex-start;
-  transition: all ease 150ms;
+  transition: all ease 100ms;
+  padding: 8px;
 }
 .button-wrapper-secondary:hover {
   cursor: pointer;
   background: var(--secondary-button-hover-color);
-  transition: all ease 150ms;
+  transition: all ease 100ms;
 }
 
 .options-wrapper {
@@ -187,6 +187,19 @@ export default defineComponent({
   align-items: center;
   padding: 2px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+.options-wrapper > .option::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 80px;
+  border-bottom: 1px solid #e1e1e1;
+  z-index: -1;
+}
+.last-option {
+  border-bottom: none;
 }
 .options-wrapper > .option > a{
   width: 100%;
@@ -201,6 +214,7 @@ export default defineComponent({
 }
 .options-wrapper > .option > a > img {
   width: 100px;
+  height: 20px;
 }
 
 
@@ -217,5 +231,6 @@ export default defineComponent({
 }
 .button-wrapper > p {
   margin-right: auto;
+  padding-left: 4px;
 }
 </style>

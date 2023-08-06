@@ -149,7 +149,7 @@ export default defineComponent({
 
 .navbar-container-mobile {
   position: absolute;
-  top: 0px;
+  top: 0;
   background: var(--card-background-color);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -204,6 +204,7 @@ export default defineComponent({
 }
 .social-media-icon-container > div > a > img {
   width: 32px;
+  opacity: 60%;
 }
 
 @media(min-width: 740px){

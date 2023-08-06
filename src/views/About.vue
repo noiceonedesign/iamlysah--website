@@ -108,6 +108,7 @@ p > span {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  align-items: center;
 }
 .quote-wrapper > .text-container {
   display: flex;
@@ -169,7 +170,11 @@ p > span {
     z-index: 6;
     margin-top: -420px;
     width: 300px;
-    align-self: flex-end;
+    left: 350px;
+    text-align: justify;
+  }
+  .quote-wrapper {
+    align-items: normal;
   }
 }
 @media (min-width: 1200px) {

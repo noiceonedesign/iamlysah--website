@@ -18,7 +18,7 @@
   --card-background-color: #FFFFFF40;
   --card-background-color-hover: #FFFFFF20;
 
-  --secondary-button-hover-color: #BCC6DA60;
+  --secondary-button-hover-color: rgba(141, 155, 217, 0.38);
 
   --box-shadow: 2px 3px 20px 6px #59433E20;
 
@@ -27,7 +27,7 @@
 }
 body {
   margin: 0;
-  background: rgb(174,166,155);
+  background-color: rgb(174,166,155);
  /* background: linear-gradient(180deg, rgba(174,166,155,1) 35%, rgba(174,166,155,1) 66%, rgba(216,206,193,1) 100%);*/
 }
 #app {
@@ -43,6 +43,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 header:has(.logo-opacity-null) {
