@@ -5,7 +5,7 @@
   <main>
     <SocailMedia/>
     <div class="background-container">
-      <img src="/assets/Lysah_You're-My-Home_Cover.jpg" alt="background image">
+      <img src="/assets/Lysah_Youre-My-Home_Cover.jpg" alt="background image">
 <!--      <img src="/assets/Lysah_Logo_Lysah_Logo.svg" alt="Logo">-->
       <div class="button-container">
         <p>
