@@ -76,7 +76,7 @@ footer {
 }
 .button-container > p {
   font-family: var(--header-font);
-  font-size: 60px;
+  font-size: 36px;
   color: var(--main-font-color-light);
 }
 .button-container > .button-wrapper > a {
@@ -103,6 +103,9 @@ footer {
     width: 300px;
     left: 64px;
     top: 130px;
+  }
+  .button-container > p {
+    font-size: 60px;
   }
 }
 
