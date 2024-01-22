@@ -5,10 +5,21 @@
   <main>
     <SocailMedia/>
     <div class="background-container">
-      <img src="/assets/Lisa_Home_BG-small.jpg" alt="background image">
-      <img src="/assets/Lysah_Logo_Lysah_Logo.svg" alt="Logo">
+      <img src="/assets/Lysah_Youre-My-Home_Cover.jpg" alt="background image">
+<!--      <img src="/assets/Lysah_Logo_Lysah_Logo.svg" alt="Logo">-->
+      <div class="button-container">
+        <p>
+          You're My Home
+        </p>
+        <div class="button-wrapper">
+          <a href="https://lysah.lnk.to/youre-my-home">Pre-save now!</a>
+        </div>
+      </div>
     </div>
   </main>
+  <footer>
+    <Footer/>
+  </footer>
 </template>
 
 <script setup>
@@ -21,6 +32,12 @@ import SocailMedia from "../components/SocialMedia.vue";
 <style scoped>
 header {
   position: absolute;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
 }
 .background-container {
   position: relative;
@@ -42,7 +59,40 @@ header {
   width: 250px;
   bottom: 120px;
 }
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+  top: 20%;
+}
 
+.button-wrapper {
+  display: flex;
+}
+.button-container > p {
+  font-family: var(--header-font);
+  font-size: 36px;
+  color: var(--main-font-color-light);
+}
+.button-container > .button-wrapper > a {
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px 20px;
+  color: var(--main-font-color-light);
+  background: #637AA790;
+  border: 1px solid var(--main-font-color-light);
+  border-radius: 8px;
+  transition: all ease-in-out 50ms;
+}
+.button-container > .button-wrapper > a:hover {
+  background: #637AA7;
+  transition: all ease-in-out 150ms;
+}
 @media (min-width: 740px) {
   .background-container > img:nth-child(1) {
     width: 1400px;
@@ -53,6 +103,9 @@ header {
     width: 300px;
     left: 64px;
     top: 130px;
+  }
+  .button-container > p {
+    font-size: 60px;
   }
 }
 

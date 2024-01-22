@@ -45,20 +45,20 @@ export default defineComponent({
 .footer-wrapper {
   display: flex;
   width: 100%;
-  height: 120px;
+  height: 60px;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.footer-wrapper::after {
+/*.footer-wrapper::after {
   content: '';
   position: absolute;
   top: 0;
   height: 1px;
-  background: var(--main-font-color-light);
+  background: var(--main-font-color-dark);
   width: 90%;
-}
+}*/
 
 a {
   text-decoration: none;
@@ -66,10 +66,11 @@ a {
 }
 
 .footer-content > a {
-  opacity: 70%;
+  opacity: 80%;
   transition: all 100ms ease-in-out;
   box-shadow: 0 1px 0 0 #FFFFFF00;
   padding-bottom: .5px;
+
 }
 
 .footer-content > a:hover {
@@ -86,7 +87,7 @@ a {
   align-items: center;
   justify-content: space-around;
   height: 100%;
-  width: 90%;
+  width: 100%;
 }
 
 
@@ -144,6 +145,8 @@ a {
 @media(min-width: 740px) {
   .footer-wrapper {
     height: 80px;
+    box-sizing: border-box;
+    padding: 0 80px;
   }
   .footer-content {
     flex-direction: row;

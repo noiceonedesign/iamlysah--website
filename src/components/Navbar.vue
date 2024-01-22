@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="navbar-wrapper">
       <router-link class="logo-desktop" to="/">
-        <img src="/assets/lysah-logo-light.svg" alt="" :class="[logo ? 'logo-opacity-full' : 'logo-opacity-null']">
+        <img src="/assets/lysah-logo-light.svg" alt="">
       </router-link>
       <div @click="clickedBurgerMenuIcon" class="burger-menu">
         <img v-if="!clicked" class="burger-menu-icon" src="/assets/ic_BM-closed-light.svg" alt="">
@@ -39,7 +39,6 @@
         </div>
       </div>
     </div>
-
     <div class="navbar-container-desktop">
       <router-link active-class="active-link" to="/music">music</router-link>
       <router-link active-class="active-link" to="/about">about</router-link>
@@ -104,13 +103,13 @@ export default defineComponent({
 }
 .navbar {
   display: flex;
-  height: 80px;
+  height: 60px;
   width: 100vw;
   position: fixed;
   align-items: center;
+  justify-content: center;
   z-index: 20;
   box-sizing: border-box;
-  background: v-bind(backgroundColor);
 }
 .navbar-wrapper {
   display: flex;
@@ -119,6 +118,13 @@ export default defineComponent({
   height: 100%;
   align-items: center;
   justify-content: space-between;
+  background: #ffffff10;
+  backdrop-filter: blur(4px);
+  border-radius:0 0 8px 8px;
+  box-shadow: 2px 3px 20px 5px #5e5e5e20;
+  border: 1px solid #ffffff20;
+  position: relative;
+  z-index: 20;
 }
 .active-link {
   text-decoration: underline;
@@ -133,8 +139,7 @@ export default defineComponent({
   width: fit-content;
 }
 .logo-desktop > img {
-  margin-top: 8px;
-  width: 80px;
+  width: 50px;
   position: relative;
   z-index: 20;
 }
@@ -150,7 +155,7 @@ export default defineComponent({
 .navbar-container-mobile {
   position: absolute;
   top: 0;
-  background: var(--card-background-color);
+  background: rgba(2, 2, 2, 0.50);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   display: flex;
@@ -170,7 +175,7 @@ export default defineComponent({
   cursor: pointer;
 }
 .burger-menu > .burger-menu-icon {
-  width: 80px;
+  width: 60px;
   position: relative;
   z-index: 20;
 }
@@ -210,22 +215,17 @@ export default defineComponent({
 @media(min-width: 740px){
 
   .navbar {
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
     padding: 0 80px;
+    height: 120px;
+    gap: 4px;
   }
 
   .burger-menu {
     display: none;
   }
-  .logo-desktop {
 
-  }
-  .logo-desktop > img {
-    width: 120px;
-    margin-top: 64px;
-    margin-left: -60px;
-  }
   .navbar-container-mobile {
     display: none;
   }
@@ -233,9 +233,51 @@ export default defineComponent({
     display: flex;
     flex-direction: row;
     gap: 64px;
+    background: #ffffff10;
+    backdrop-filter: blur(4px);
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 3px 20px 5px #5e5e5e20;
+    border: 1px solid #ffffff20;
+    box-sizing: border-box;
+    height: 50px;
+    transition: all ease-in-out 50ms;
   }
+  .navbar-container-desktop:hover {
+    cursor: pointer;
+    background: #ffffff20;
+    transition: all ease-in-out 150ms;
+  }
+
   .navbar-wrapper {
+    align-items: flex-end;
+    padding: 0;
     width: fit-content;
+    height: fit-content;
+    border: none;
+    background: none;
+    box-shadow: none;
+
+  }
+
+  .logo-desktop {
+    height: 50px;
+    box-sizing: border-box;
+    background: #ffffff10;
+    backdrop-filter: blur(4px);
+    padding: 8px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 3px 20px 5px #5e5e5e20;
+    border: 1px solid #ffffff20;
+    transition: all ease-in-out 50ms;
+  }
+  .logo-desktop:hover {
+    background: #ffffff20;
+    cursor: pointer;
+    transition: all ease-in-out 150ms;
+  }
+  .logo-desktop > img {
+    width: 50px;
   }
   .navbar-container-desktop > .active-link {
     box-shadow: 0 1px 0 0 var(--main-font-color-light);
@@ -246,18 +288,25 @@ export default defineComponent({
     color: var(--main-font-color-light);
     box-shadow: 0 1px 0 0 #FFFFFF00;
     padding-bottom: .5px;
+    transition: all ease-in-out 150ms;
 
   }
   .navbar-container-desktop > a:hover {
     cursor: pointer;
     box-shadow: 0 1px 0 0 var(--main-font-color-light);
     padding-bottom: .5px;
+    transition: all ease-in-out 50ms;
   }
 }
 
 @media (min-width: 1200px) {
   .logo-desktop > img {
     margin-left: 0;
+  }
+  .navbar {
+    height: 100px;
+    padding: 0 100px;
+    justify-content: flex-end;
   }
 }
 
