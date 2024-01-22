@@ -16,7 +16,9 @@
       </div>
     </div>
   </main>
-  <Footer/>
+  <footer>
+    <Footer/>
+  </footer>
 </template>
 
 

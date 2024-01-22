@@ -74,13 +74,14 @@ export default defineComponent({
   .contact-component-wrapper {
     position: absolute;
     z-index: 0;
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     box-sizing: border-box;
+    padding: 0 80px;
   }
   .email-container,
   .subscribe-container {
@@ -94,7 +95,7 @@ export default defineComponent({
   .subscribe-container > a {
     width: fit-content;
     background: var(--cta-color);
-    color: var(--main-font-color-light);
+    color: var(--main-font-color-dark);
     padding: 8px 16px;
     box-sizing: border-box;
     border-radius: 7px;
@@ -116,14 +117,14 @@ export default defineComponent({
   .link-container-contact > a {
     text-decoration: none;
     font-size: 16px;
-    color: var(--main-font-color-light);
+    color: var(--main-font-color-dark);
     display: flex;
     align-items: center;
     gap: 16px;
     padding: 12px;
     width: fit-content;
     border-radius: 25px;
-    border: 1px solid var(--main-font-color-light);
+    border: 1px solid var(--main-font-color-dark);
   }
   .subscribe-button-wrapper {
     display: flex;
@@ -135,7 +136,7 @@ export default defineComponent({
   .social-media-component-wrapper {
     position: absolute;
     z-index: 1;
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -143,6 +144,7 @@ export default defineComponent({
     gap: 64px;
     justify-content: center;
     box-sizing: border-box;
+    padding: 0 100px;
   }
   .social-media-component-wrapper > div {
     display: flex;
