@@ -6,32 +6,13 @@
     <div class="site-wrapper">
       <SocailMedia/>
       <div class="flex-box-big">
-        <div class="flex-box-wrapper">
-          <MusicPlayerBig v-for="(musicCardBig, index) in MusicCardsBig"
-                          :kex="index"
-                          :artist="musicCardBig.artist"
-                          :song-path="musicCardBig.songPath"
-                          :img-path="musicCardBig.imgPath"
-                          :song-name="musicCardBig.songName"
-                          :i-tunes-u-r-l="musicCardBig.iTunesURL"
-                          :amazon-music-u-r-l="musicCardBig.amazonMusicURL"
-                          :spotify-u-r-l="musicCardBig.spotifyURL"
-                          :youtube-u-r-l="musicCardBig.youtubeURL"
-          />
-        </div>
-        <div class="flex-box-wrapper flex-box-grid">
-          <MuscicPlayerSmall ref="musicPlayerSmall" v-for="(musicCard, index) in MusicCardsSmall"
-                             :key="index"
-                             :artist="musicCard.artist"
-                             :song-path="musicCard.songPath"
-                             :img-path="musicCard.imgPath"
-                             :song-name="musicCard.songName"
-                             :i-tunes-u-r-l="musicCard.iTunesURL"
-                             :amazon-music-u-r-l="musicCard.amazonMusicURL"
-                             :spotify-u-r-l="musicCard.spotifyURL"
-                             :youtube-u-r-l="musicCard.youtubeURL"
-          />
-        </div>
+        <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/album/25tFsAkm6vA35hWOLi1jvd?utm_source=generator&theme=0"
+                width="100%"
+                height="352" frameBorder="0"
+                allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+        </iframe>
       </div>
     </div>
   </main>
@@ -78,6 +59,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   gap: 32px;
 }
