@@ -95,7 +95,7 @@ footer {
 }
 @media (min-width: 740px) {
   .background-container > img:nth-child(1) {
-    width: 1400px;
+    width: 1500px;
     margin-left: 200px;
     top: -10px;
   }
@@ -111,7 +111,7 @@ footer {
 
 @media (min-width: 1200px) {
   .background-container > img:nth-child(1) {
-    width: 1600px;
+    width: 1920px;
     margin: 0;
     top: -20px;
   }

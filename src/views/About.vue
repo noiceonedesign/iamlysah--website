@@ -84,7 +84,6 @@ display: none;
   flex-direction: column;
   width: 80%;
   gap: 64px;
-
 }
 p {
   text-align: justify;
