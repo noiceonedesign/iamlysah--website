@@ -134,10 +134,10 @@ export default defineComponent({
 }
 @media (min-width: 1400px) {
   .social-media-component-wrapper {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     width: 100%;
-    height: 100%;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -145,6 +145,7 @@ export default defineComponent({
     justify-content: center;
     box-sizing: border-box;
     padding: 0 100px;
+    top: 0;
   }
   .social-media-component-wrapper > div {
     display: flex;
@@ -160,6 +161,7 @@ export default defineComponent({
   }
   .social-media-component-wrapper > div > a:hover {
     opacity: 100%;
+    box-shadow: 2px 3px 20px 5px #5e5e5e20;
     transition: all 100ms ease-in-out;
   }
   .social-media-component-wrapper > div > a > img {

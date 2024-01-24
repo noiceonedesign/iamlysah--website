@@ -120,6 +120,7 @@ export default defineComponent({
   justify-content: space-between;
   background: #ffffff10;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius:0 0 8px 8px;
   box-shadow: 2px 3px 20px 5px #5e5e5e20;
   border: 1px solid #ffffff20;
@@ -215,7 +216,7 @@ export default defineComponent({
 @media(min-width: 740px){
 
   .navbar {
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
     padding: 0 80px;
     height: 120px;
@@ -235,6 +236,7 @@ export default defineComponent({
     gap: 64px;
     background: #ffffff10;
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     padding: 12px 20px;
     border-radius: 8px;
     box-shadow: 2px 3px 20px 5px #5e5e5e20;
@@ -265,6 +267,7 @@ export default defineComponent({
     box-sizing: border-box;
     background: #ffffff10;
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     padding: 8px 20px;
     border-radius: 8px;
     box-shadow: 2px 3px 20px 5px #5e5e5e20;
