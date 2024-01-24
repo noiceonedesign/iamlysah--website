@@ -134,7 +134,7 @@ export default defineComponent({
 .img-wrapper {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 300px;
   justify-content: center;
   align-items: center;
   gap: 6px;

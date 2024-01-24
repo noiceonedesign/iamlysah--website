@@ -8,9 +8,7 @@
       <div class="content-container">
         <h3 class="desktop-view">Lysah has always been driven by deep emotions that she channels into her creative work. </h3>
         <div class="quote-wrapper">
-          <div class="img-outlines-container">
-            <div class="img-wrapper"></div>
-          </div>
+          <div class="img-wrapper"></div>
           <h3 class="tablet-view">Lysah has always been driven by deep emotions that she channels into her creative work. </h3>
           <div class="text-container">
             <p>Lysah is a Vienna based <span>Pop singer</span>, songwriter and performer.
@@ -83,7 +81,7 @@ display: none;
   display: flex;
   flex-direction: column;
   width: 80%;
-  gap: 64px;
+  gap: 24px;
 }
 p {
   text-align: justify;
@@ -93,42 +91,27 @@ p > span {
 }
 
 .img-wrapper {
-  height: 350px;
-  width: 250px;
-  border-radius: 120px 20px 120px 120px;
+  height: 300px;
+  min-width: 300px;
+  border-radius: 150px 10px 150px 10px;
   background-image: url("/assets/Lisa_Home_BG-small.jpg");
   background-repeat: no-repeat;
-  background-position-y:-30px;
-  background-position-x:-200px;
+  background-position-y:-15px;
+  background-position-x:-170px;
   background-size: 600px;
   overflow: hidden;
-  justify-self: center;
   box-shadow: var(--box-shadow);
 }
 .quote-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 32px;
   align-items: center;
 }
 .quote-wrapper > .text-container {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-}
-.img-outlines-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  height: 400px;
-  width: 300px;
-}
-.img-outlines-container > img {
-  width: 200px;
-  bottom: -20px;
-  right: -20px;
+  gap: 24px;
 }
 .italic-styling {
   font-style: italic;
@@ -147,15 +130,14 @@ p > span {
     display: none;
   }
   .tablet-view {
-    position: relative;
-    z-index: 6;
-    margin-top: -420px;
-    width: 300px;
-    left: 350px;
     text-align: justify;
+    font-size: 32px;
   }
   .quote-wrapper {
     align-items: normal;
+  }
+  .img-wrapper {
+    width: 300px;
   }
 }
 @media (min-width: 1200px) {
@@ -168,16 +150,15 @@ p > span {
   h3 {
     text-align: left;
     font-size: 42px;
-    margin-left: -128px;
   }
   .content-container {
     width: 80%;
     max-width: 800px;
-    gap: 48px;
+    gap: 32px;
   }
   .quote-wrapper {
     flex-direction: row;
-    gap: 128px;
+    gap: 80px;
   }
   .quote-wrapper > .text-container {
     justify-self: flex-end;

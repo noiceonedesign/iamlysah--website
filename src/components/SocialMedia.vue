@@ -161,6 +161,7 @@ export default defineComponent({
   }
   .social-media-component-wrapper > div > a:hover {
     opacity: 100%;
+    box-shadow: 2px 3px 20px 5px #5e5e5e20;
     transition: all 100ms ease-in-out;
   }
   .social-media-component-wrapper > div > a > img {
