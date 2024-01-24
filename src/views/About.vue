@@ -130,26 +130,6 @@ p > span {
   bottom: -20px;
   right: -20px;
 }
-.img-outlines-container:after {
-  position: absolute;
-  content: '';
-  height: 400px;
-  width: 30px;
-  border-left: 1px solid var(--main-font-color-light);
-  border-bottom: 1px solid var(--main-font-color-light);
-  left: 30px;
-  z-index: -1;
-}
-.img-outlines-container:before {
-  position: absolute;
-  content: '';
-  height: 40px;
-  width: 300px;
-  top: 40px;
-  border-top: 1px solid var(--main-font-color-light);
-  border-right: 1px solid var(--main-font-color-light);
-  z-index: -1;
-}
 .italic-styling {
   font-style: italic;
   font-weight: normal;
