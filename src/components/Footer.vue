@@ -84,10 +84,12 @@ a {
 .footer-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  align-items: flex-end;
+  justify-content: center;
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 
@@ -146,12 +148,14 @@ a {
   .footer-wrapper {
     height: 80px;
     box-sizing: border-box;
-    padding: 0 80px;
+    padding: 0 100px;
   }
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid var(--main-font-color-light30);
+    padding: 0;
   }
   .social-media-container {
     display: flex;
@@ -181,6 +185,7 @@ a {
   .social-media-container {
     display: none;
   }
+
 
 }
 </style>

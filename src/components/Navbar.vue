@@ -216,7 +216,7 @@ export default defineComponent({
 @media(min-width: 740px){
 
   .navbar {
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
     padding: 0 80px;
     height: 120px;
