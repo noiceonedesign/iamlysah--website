@@ -20,7 +20,7 @@
             </a>
           </div>
           <div class="contact-container">
-            <p>tik tok</p>
+            <p>tiktok</p>
             <a href="https://www.tiktok.com/@iamlysah/" class="link-container" target="_blank">
               <img src="/assets/ic_tiktok.svg"><p>|</p> <p>iamlysah</p>
             </a>
@@ -48,7 +48,7 @@
           </div>
         </div>
         <div class="link-button-wrapper">
-          <h3>Contact me by email</h3>
+          <h3>Contact me via email</h3>
           <div class="contact-container">
             <p>email adress</p>
             <a href="mailto:hello@iamlysah.com" class="link-container" target="_blank">
@@ -135,10 +135,13 @@ h3 {
   border-radius: 8px;
   opacity: 80%;
   text-decoration: none;
-  transition: all ease-in-out 50ms;
+  transition: all ease-in-out 100ms;
   height: 43px;
   justify-content: center;
   align-items: center;
+  background: #ffffff20;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .contact-container > p {
   padding: 0 8px;

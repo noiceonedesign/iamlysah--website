@@ -12,7 +12,7 @@
           You're My Home
         </p>
         <div class="button-wrapper">
-          <a href="https://lysah.lnk.to/youre-my-home">Pre-save now!</a>
+          <a href="https://lysah.lnk.to/youre-my-home">Listen now!</a>
         </div>
       </div>
     </div>

@@ -6,15 +6,15 @@
     <div class="site-wrapper">
     <SocailMedia/>
       <div class="content-container">
-        <h3 class="desktop-view">Lysah has always been driven by deep emotions that she channels into her creative work. </h3>
+        <h3 class="desktop-view">Lysah - Vienna-born pop singer, combining commercial pop music and catchy hooks.</h3>
         <div class="quote-wrapper">
-          <div class="img-wrapper"></div>
-          <h3 class="tablet-view">Lysah has always been driven by deep emotions that she channels into her creative work. </h3>
+          <div class="header-wrapper">
+            <div class="img-wrapper"></div>
+            <h3 class="tablet-view">Lysah - Vienna-born pop singer, combining commercial pop music and catchy hooks.</h3>
+          </div>
           <div class="text-container">
             <p>Lysah is a Vienna based <span>Pop singer</span>, songwriter and performer.
-              She skilfully <span>combines</span> commercial <span>Pop</span> with <span>classical elements</span>,
-              making her sound one-of-a-kind. Her powerful vocals and emotional songwriting build the base of her songs and
-              her catchy melodies stay with you long after listening
+              She skilfully <span>combines</span> commercial <span>Pop music</span> with <span>electronic and classical elements</span>, with her style having been described as a mix of Taylor Swift, Banks and Victoria Canal.
             </p>
             <p>
               <span>Sail</span> - Lysahs most popular release to date- has since amassed <span>over 100.000 streams</span>
@@ -64,7 +64,11 @@ export default defineComponent({
 
 <style scoped>
 h3 {
-display: none;
+  font-family: var(--header-font);
+  font-weight: normal;
+  font-size: 26px;
+  margin: 0;
+  text-align: left;
 }
 .site-wrapper {
   width: 100%;
@@ -84,7 +88,7 @@ display: none;
   gap: 24px;
 }
 p {
-  text-align: justify;
+  text-align: left;
 }
 p > span {
   font-weight: bold;
@@ -93,11 +97,11 @@ p > span {
 .img-wrapper {
   height: 300px;
   min-width: 300px;
-  border-radius: 150px 10px 150px 10px;
+  border-radius: 150px 150px 10px 10px;
   background-image: url("/assets/Lisa_Home_BG-small.jpg");
   background-repeat: no-repeat;
   background-position-y:-15px;
-  background-position-x:-170px;
+  background-position-x:center;
   background-size: 600px;
   overflow: hidden;
   box-shadow: var(--box-shadow);
@@ -117,20 +121,20 @@ p > span {
   font-style: italic;
   font-weight: normal;
 }
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.desktop-view {
+  display: none;
+}
 @media(min-width: 740px) {
-  h3 {
-    font-family: var(--header-font);
-    font-weight: normal;
-    font-size: 36px;
-    margin: 0;
-    text-align: right;
-    display: block;
-  }
   .desktop-view {
     display: none;
   }
   .tablet-view {
-    text-align: justify;
+    text-align: left;
     font-size: 32px;
   }
   .quote-wrapper {
@@ -138,6 +142,14 @@ p > span {
   }
   .img-wrapper {
     width: 300px;
+  }
+  .header-wrapper {
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-end;
+  }
+  .img-wrapper {
+    border-radius: 150px 10px 10px 10px;
   }
 }
 @media (min-width: 1200px) {
@@ -164,6 +176,9 @@ p > span {
     justify-self: flex-end;
     align-self: flex-end;
     text-align: justify;
+  }
+  .img-wrapper {
+    border-radius: 150px 10px 10px 10px;
   }
 }
 </style>

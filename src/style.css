@@ -2,13 +2,15 @@
 
 :root {
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 400;
   letter-spacing: 1px;
   color: var(--main-font-color-dark);
 
   --main-font-color-light: #F3F0EB;
   --main-font-color-dark: #2A2828;
+
+  --main-font-color-light30: #F3F0EB30;
 
   --background-color-light: #FFFFFF60;
 
