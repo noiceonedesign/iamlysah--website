@@ -5,14 +5,14 @@
   <main>
     <SocailMedia/>
     <div class="background-container">
-      <img src="/assets/Lysah_Youre-My-Home_Cover.jpg" alt="background image">
+      <img src="/assets/Lysah_Underwater_Cover.jpg" alt="background image">
 <!--      <img src="/assets/Lysah_Logo_Lysah_Logo.svg" alt="Logo">-->
       <div class="button-container">
         <p>
-          You're My Home
+          Underwater
         </p>
         <div class="button-wrapper">
-          <a href="https://lysah.lnk.to/youre-my-home">Listen now!</a>
+          <a href="https://tr.ee/DXvM2_M9Bc" target="_blank">Listen now!</a>
         </div>
       </div>
     </div>
@@ -51,8 +51,7 @@ footer {
 }
 .background-container > img:nth-child(1) {
   position: absolute;
-  width: 1200px;
-  margin-right: 100px;
+  width: 1000px;
 }
 .background-container > img:nth-child(2) {
   position: absolute;
@@ -78,6 +77,7 @@ footer {
   font-family: var(--header-font);
   font-size: 36px;
   color: var(--main-font-color-light);
+  text-shadow: 1px 1px 8px #01182C80;
 }
 .button-container > .button-wrapper > a {
   box-sizing: border-box;
@@ -88,6 +88,7 @@ footer {
   border: 1px solid var(--main-font-color-light);
   border-radius: 8px;
   transition: all ease-in-out 50ms;
+  box-shadow: 1px 1px 25px 10px #01182C30;
 }
 .button-container > .button-wrapper > a:hover {
   background: #637AA7;
@@ -95,8 +96,7 @@ footer {
 }
 @media (min-width: 740px) {
   .background-container > img:nth-child(1) {
-    width: 1500px;
-    margin-left: 200px;
+    width: 2000px;
     top: -10px;
   }
   .background-container > img:nth-child(2) {
